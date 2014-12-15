@@ -14,7 +14,7 @@
         <form class="navbar-form navbar-left">
             <input type="text" class="form-control col-lg-8" placeholder="{{('Search' | translate)}}">
         </form>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right" ng-show="isAuthenticated">
             <!-- <li><a href="javascript:void(0)">Link</a></li> -->
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropdown-toggle ar-five-paddings" data-toggle="dropdown">
@@ -28,11 +28,9 @@
                 </a>
 
                 <ul class="dropdown-menu">
-                    <li><a href="javascript:void(0)">Action</a></li>
-                    <li><a href="javascript:void(0)">Another action</a></li>
-                    <li><a href="javascript:void(0)">Something else here</a></li>
+                    <!-- <li><a href="javascript:void(0)">Action</a></li> -->
                     <li class="divider"></li>
-                    <li><a href="javascript:void(0)">Separated link</a></li>
+                    <li><a href="javascript:void(0)" ng-click="logout()" translate>Logout</a></li>
                 </ul>
             </li>
 

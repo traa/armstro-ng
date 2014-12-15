@@ -223,8 +223,8 @@ module.run(['$templateCache', function($templateCache) {
     '      <div class="col-xs-6 col-md-4">\n' +
     '          \n' +
     '         <div class="icon-preview">\n' +
-    '            <h5 style="float:right;">stagedown@gmail.com</h5>\n' +
-    '            <i class="mdi-action-bug-report ar-fs-lg ar-footer-icon"></i> \n' +
+    '            <!-- <h5 style="float:right;">stagedown@gmail.com</h5>\n' +
+    '            <i class="mdi-action-bug-report ar-fs-lg ar-footer-icon"></i>  -->\n' +
     '          </div>\n' +
     '\n' +
     '\n' +
@@ -259,7 +259,7 @@ module.run(['$templateCache', function($templateCache) {
     '        <form class="navbar-form navbar-left">\n' +
     '            <input type="text" class="form-control col-lg-8" placeholder="{{(\'Search\' | translate)}}">\n' +
     '        </form>\n' +
-    '        <ul class="nav navbar-nav navbar-right">\n' +
+    '        <ul class="nav navbar-nav navbar-right" ng-show="isAuthenticated">\n' +
     '            <!-- <li><a href="javascript:void(0)">Link</a></li> -->\n' +
     '            <li class="dropdown">\n' +
     '                <a href="javascript:void(0)" class="dropdown-toggle ar-five-paddings" data-toggle="dropdown">\n' +
@@ -273,11 +273,9 @@ module.run(['$templateCache', function($templateCache) {
     '                </a>\n' +
     '\n' +
     '                <ul class="dropdown-menu">\n' +
-    '                    <li><a href="javascript:void(0)">Action</a></li>\n' +
-    '                    <li><a href="javascript:void(0)">Another action</a></li>\n' +
-    '                    <li><a href="javascript:void(0)">Something else here</a></li>\n' +
+    '                    <!-- <li><a href="javascript:void(0)">Action</a></li> -->\n' +
     '                    <li class="divider"></li>\n' +
-    '                    <li><a href="javascript:void(0)">Separated link</a></li>\n' +
+    '                    <li><a href="javascript:void(0)" ng-click="logout()" translate>Logout</a></li>\n' +
     '                </ul>\n' +
     '            </li>\n' +
     '\n' +

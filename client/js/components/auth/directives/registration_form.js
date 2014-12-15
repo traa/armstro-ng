@@ -4,7 +4,7 @@ define(['angular', '../module'], function (angular) {
 
     angular
         .module('auth.directives')
-        .directive('registrationForm', ['gettextCatalog', 'User', function loginFormDir(gettextCatalog, User) {
+        .directive('registrationForm', ['gettextCatalog', 'User', '$location', function loginFormDir(gettextCatalog, User, $location) {
             return {
                 restrict: 'AE',
                 scope: {},
@@ -17,16 +17,38 @@ define(['angular', '../module'], function (angular) {
                     $scope.passwordPlaceholder = gettextCatalog.getString('Enter your password to signup');
 
                     $scope.reg = function(user) {
-                        console.log(user);
-
+                        
                         if (user.password === user.passwordrepeat 
+                            && user.email
                             && user.iagree 
                             && user.gameclass) {
 
                             //doing smth with User
-                            User.create({email: 'foo@bar.com', password: 'bar'}, function(err, user) {
-                                console.log(user);
+                            var newUser = User.create({
+                                email: user.email, 
+                                password: user.password, 
+                                gameclass: user.gameclass
                             });
+
+                            newUser.$promise.then(function(data) {
+                                if (data.id) {
+                                    
+                                    User.login({
+                                        rememberMe: true
+                                    }, {
+                                        email: user.email,
+                                        password: user.password
+                                    }).$promise.then(function (data) {
+
+                                        //data.user
+
+                                        console.log('token', data);
+                                        $location.path('/');
+                                    });
+                                    
+                                }
+                            });
+                            
                         }
 
                     };

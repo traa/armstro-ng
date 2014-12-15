@@ -8,7 +8,7 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mongoIDs"
   },
   "AccessToken": {
     "dataSource": "db",

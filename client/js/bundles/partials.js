@@ -217,7 +217,7 @@ module.run(['$templateCache', function($templateCache) {
     '            <h6 style="margin-bottom: 5px;">armstro-ng@{{::(\'@VERSION\' | translate)}}</h6>\n' +
     '            <h5 style="margin:0;">\n' +
     '                <i class="mdi-action-extension ar-red-footer-icon"></i>\n' +
-    '                <a href="https://github.com/traa" target="_blank">traa</a>\n' +
+    '                truthatenvy\n' +
     '            </h5>\n' +
     '      </div>\n' +
     '      <div class="col-xs-6 col-md-4">\n' +

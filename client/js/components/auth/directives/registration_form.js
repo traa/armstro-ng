@@ -4,7 +4,7 @@ define(['angular', '../module'], function (angular) {
 
     angular
         .module('auth.directives')
-        .directive('registrationForm', ['gettextCatalog', function loginFormDir(gettextCatalog) {
+        .directive('registrationForm', ['gettextCatalog', 'User', function loginFormDir(gettextCatalog, User) {
             return {
                 restrict: 'AE',
                 scope: {},
@@ -19,8 +19,14 @@ define(['angular', '../module'], function (angular) {
                     $scope.reg = function(user) {
                         console.log(user);
 
-                        if (user.password === user.passwordrepeat && user.iagree) {
+                        if (user.password === user.passwordrepeat 
+                            && user.iagree 
+                            && user.gameclass) {
 
+                            //doing smth with User
+                            User.create({email: 'foo@bar.com', password: 'bar'}, function(err, user) {
+                                console.log(user);
+                            });
                         }
 
                     };

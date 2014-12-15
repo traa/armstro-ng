@@ -4,7 +4,7 @@ define(['angular', '../module'], function (angular) {
 
     angular
         .module('common.directives')
-        .directive('jqDropdown', ['safeApply' ,function jqDropdownDir(safeApply) {
+        .directive('jqDropdown', [function jqDropdownDir() {
             return {
                 restrict: 'A',
                 require: 'ngModel',

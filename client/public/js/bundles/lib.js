@@ -1,0 +1,5 @@
+define('bundles/lib',[
+
+], function () {
+
+});

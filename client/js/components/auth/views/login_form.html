@@ -1,0 +1,43 @@
+﻿
+<form class="form-horizontal">
+    <fieldset>
+
+    <legend translate>Login</legend>
+
+   		<div class="form-group">
+            
+            <label for="inputEmail" class="col-lg-2 control-label" translate>Email</label>
+
+            <div class="col-lg-10">
+                <input type="email" class="form-control" id="inputEmail" placeholder="{{::emailPlaceholder}}">
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label for="inputPassword" class="col-lg-2 control-label" translate>Password</label>
+            <div class="col-lg-10">
+                <input type="password" class="form-control" id="inputPassword" placeholder="{{::passwordPlaceholder}}">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="remember_me">
+                        <span class="ripple"></span>
+                        <span class="check"></span>
+                        {{::('Remember me' | translate)}}
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="submit" class="btn btn-primary btn-info" translate>Enter</button>
+            </div>
+        </div>
+
+
+    </fieldset>
+
+</form>
+

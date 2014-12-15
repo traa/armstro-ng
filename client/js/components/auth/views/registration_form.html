@@ -1,0 +1,77 @@
+
+<form class="form-horizontal">
+    <fieldset>
+
+    <legend translate>Registration</legend>
+
+   		<div class="form-group">
+            
+            <label for="inputEmail" class="col-lg-2 control-label" translate>Email</label>
+
+            <div class="col-lg-10">
+                <input type="email" class="form-control floating-label" ng-model="user.email" id="inputEmail" placeholder="{{::emailPlaceholder}}">
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label for="inputPassword" class="col-lg-2 control-label" translate>Password</label>
+            <div class="col-lg-10">
+                <input type="password" class="form-control" ng-model="user.password" id="inputPassword" placeholder="{{::passwordPlaceholder}}">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputPasswordRepeat" class="col-lg-2 control-label" translate>Password repeat</label>
+            <div class="col-lg-10">
+                <input type="password" ng-model="user.passwordrepeat" class="form-control" id="inputPasswordRepeat" placeholder="{{::('Repeat to be sure' | translate)}}">
+            </div>
+        </div>
+
+         <div class="form-group" >
+            <label for="gameclass" class="col-lg-2 control-label" translate>Game class</label>
+
+            <div class="col-lg-10">
+                <select ng-model="user.gameclass" class="select form-control floating-label" placeholder="{{::('Choose your class' | translate)}}" jq-dropdown id="gameclass">
+                    <option value="paladin">Paladin</option>
+                    <option value="fighter">Fighter</option>
+                    <option value="wizard">Wizard</option>
+                </select>
+            </div>
+            
+        </div>
+
+
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="list-group">
+                
+                <div class="list-group-item">
+                    <div class="row-action-primary checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="user.iagree">
+                            <span class="ripple"></span>
+                            <span class="check"></span>
+                        </label>
+                    </div>
+                    <div class="row-content">
+                        <h4 class="list-group-item-heading" translate>I agree with rules of the game</h4>
+                        <p class="list-group-item-text" translate>And will not hesitate
+                        </p>
+                    </div>
+                </div>
+                <div class="list-group-separator"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                
+                <button class="btn btn-default" translate>Clear</button>
+                <button type="submit" class="btn btn-primary btn-success" ng-click="reg(user)" translate>Send</button>
+            </div>
+        </div>
+
+    </fieldset>
+
+</form>
+

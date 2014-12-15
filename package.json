@@ -1,0 +1,22 @@
+{
+  "name": "ng-forum",
+  "description": "angularjs based forum for Sials shard",
+  "author": "traa",
+  "dependencies": {
+    "express": "^4.10.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.4.0",
+    "gulp-csso": "^0.2.9",
+    "gulp-insert": "^0.4.0",
+    "gulp-ng-constant": "^0.2.0",
+    "gulp-ng-html2js-ext": "^0.1.9",
+    "gulp-regex-replace": "^0.2.3",
+    "gulp-run": "^1.6.4",
+    "q": "^1.0.1",
+    "rjs": "^4.0.2",
+    "yargs": "^1.3.2"
+  }
+}

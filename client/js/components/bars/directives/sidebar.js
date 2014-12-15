@@ -7,9 +7,11 @@ define(['angular', '../module'], function (angular) {
         .directive('sidebar', [function sidebarDirective() {
             return {
                 restrict: 'AE',
-                scope: {},
+                scope: {
+                    isauth: '='
+                },
                 link: function ($scope, $elem, $attrs) {
-                
+                    console.log($scope.isauth, $attrs.isauth);
                 },
                 templateUrl: 'bars/views/side_layout.html'
             };

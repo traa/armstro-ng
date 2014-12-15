@@ -7,24 +7,10 @@ define(['angular', '../module'], function (angular) {
         .directive('headerNavbar', [ 'User', function headerDirective(User) {
             return {
                 restrict: 'AE',
-                scope: {},
+                scope: {
+                    isauth: '='
+                },
                 link: function ($scope, $elem, $attrs) {
-
-                    $scope.isAuthenticated = User.isAuthenticated();
-
-
-                    $scope.$watch(function () {
-
-                        return User.isAuthenticated();
-
-                    }, function (newVal, oldVal) {
-
-                        //if authenticated
-                        if (newVal !== oldVal) {
-                            $scope.isAuthenticated = newVal;
-                        }
-
-                    });
 
                     $scope.logout = function () {
                         User.logout();

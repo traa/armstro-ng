@@ -4,18 +4,35 @@ define(['angular', '../module' ], function (angular) {
         .module('app.controllers')
         .controller('AppCtrl', ['$scope', 'Forum', 'User', function AppCtrl($scope, Forum, User) {
 
-        	var p = Forum.find();
+        	var self = this;
 
-        	console.log(p);
+        	this.isAuthenticatedUser = User.isAuthenticated();
+        	// var p = Forum.find();
 
-        	p.$promise.then(function(data) {
-        		console.log('data', data);
-        	});
+        	// console.log(p);
+
+        	// p.$promise.then(function(data) {
+        	// 	console.log('data', data);
+        	// });
 
         	//call to 401
         	//Forum.status();
 
-        	console.log('isAuthenticated', User.isAuthenticated())
+	        $scope.$watch(function () {
+
+                return User.isAuthenticated();
+
+            }, function (newVal, oldVal) {
+
+                //if authenticated
+                if (newVal !== oldVal) {
+                    self.isAuthenticatedUser = newVal;
+                }
+
+            });
+
+
+        	console.log('isAuthenticated', this.isAuthenticatedUser);
 
         }]);
 });

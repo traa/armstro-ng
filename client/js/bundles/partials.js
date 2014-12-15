@@ -72,7 +72,7 @@ module.run(['$templateCache', function($templateCache) {
     '            <label for="inputEmail" class="col-lg-2 control-label" translate>Email</label>\n' +
     '\n' +
     '            <div class="col-lg-10">\n' +
-    '                <input type="email" class="form-control" id="inputEmail" placeholder="{{::emailPlaceholder}}">\n' +
+    '                <input type="email" class="form-control" id="inputEmail" placeholder="{{::emailPlaceholder}}" ng-model="user.email">\n' +
     '            </div>\n' +
     '\n' +
     '        </div>\n' +
@@ -80,10 +80,10 @@ module.run(['$templateCache', function($templateCache) {
     '        <div class="form-group">\n' +
     '            <label for="inputPassword" class="col-lg-2 control-label" translate>Password</label>\n' +
     '            <div class="col-lg-10">\n' +
-    '                <input type="password" class="form-control" id="inputPassword" placeholder="{{::passwordPlaceholder}}">\n' +
+    '                <input type="password" class="form-control" id="inputPassword" placeholder="{{::passwordPlaceholder}}" ng-model="user.password">\n' +
     '                <div class="checkbox">\n' +
     '                    <label>\n' +
-    '                        <input type="checkbox" name="remember_me">\n' +
+    '                        <input type="checkbox" name="remember_me" ng-model="user.rememberme">\n' +
     '                        <span class="ripple"></span>\n' +
     '                        <span class="check"></span>\n' +
     '                        {{::(\'Remember me\' | translate)}}\n' +
@@ -95,7 +95,7 @@ module.run(['$templateCache', function($templateCache) {
     '\n' +
     '        <div class="form-group">\n' +
     '            <div class="col-lg-10 col-lg-offset-2">\n' +
-    '                <button type="submit" class="btn btn-primary btn-info" translate>Enter</button>\n' +
+    '                <button type="submit" class="btn btn-primary btn-info" translate ng-click="login(user)">Enter</button>\n' +
     '            </div>\n' +
     '        </div>\n' +
     '\n' +
@@ -250,7 +250,7 @@ module.run(['$templateCache', function($templateCache) {
     '            <span class="icon-bar"></span>\n' +
     '            <span class="icon-bar"></span>\n' +
     '        </button>\n' +
-    '        <a class="navbar-brand" href="javascript:void(0)" translate>Siala</a>\n' +
+    '        <a class="navbar-brand" href="javascript:void(0)" ui-sref="home" translate>Siala</a>\n' +
     '    </div>\n' +
     '    <div class="navbar-collapse collapse navbar-inverse-collapse">\n' +
     '        <ul class="nav navbar-nav">\n' +
@@ -259,7 +259,7 @@ module.run(['$templateCache', function($templateCache) {
     '        <form class="navbar-form navbar-left">\n' +
     '            <input type="text" class="form-control col-lg-8" placeholder="{{(\'Search\' | translate)}}">\n' +
     '        </form>\n' +
-    '        <ul class="nav navbar-nav navbar-right" ng-show="isAuthenticated">\n' +
+    '        <ul class="nav navbar-nav navbar-right" ng-show="isauth">\n' +
     '            <!-- <li><a href="javascript:void(0)">Link</a></li> -->\n' +
     '            <li class="dropdown">\n' +
     '                <a href="javascript:void(0)" class="dropdown-toggle ar-five-paddings" data-toggle="dropdown">\n' +
@@ -305,46 +305,97 @@ module.run(['$templateCache', function($templateCache) {
     '    </ul>\n' +
     '</div> -->\n' +
     '\n' +
-    '<a href="javascript:void(0)" class="btn btn-success btn-raised ar-same-width-1">\n' +
-    '    <div class="icon-preview ar-icon-medium">\n' +
-    '        <i class="mdi-communication-forum"></i>\n' +
-    '        <span translate>New posts</span>\n' +
-    '        <span class="badge">3</span>\n' +
-    '    </div>\n' +
-    '</a>\n' +
-    '\n' +
-    '<div class="btn-group-vertical ar-same-width-1">\n' +
-    '    <a href="javascript:void(0)" class="btn btn-default btn-raised">\n' +
-    '        \n' +
-    '        <div class="icon-preview ar-icon-medium">\n' +
-    '            <i class="mdi-communication-email"></i>\n' +
-    '            <span translate>Messages</span>\n' +
-    '        </div>\n' +
-    '\n' +
-    '    </a>\n' +
+    '<side-menu-widget isauth="isauth"></side-menu-widget>\n' +
     '\n' +
     '\n' +
-    '\n' +
-    '    <a href="javascript:void(0)" class="btn btn-default btn-raised">\n' +
-    '        \n' +
-    '        <div class="icon-preview ar-icon-medium">\n' +
-    '            <i class="mdi-notification-folder-special"></i>\n' +
-    '            <span translate>Bookmarks</span>\n' +
-    '            <span class="label label-default">beta</span>\n' +
-    '        </div>\n' +
-    '        \n' +
-    '    </a>\n' +
-    '\n' +
-    '    <a href="javascript:void(0)" class="btn btn-default btn-raised">\n' +
-    '        \n' +
-    '        <div class="icon-preview ar-icon-medium">\n' +
-    '            <i class="mdi-action-settings"></i>\n' +
-    '            <span translate>Settings</span>\n' +
-    '        </div>\n' +
-    '        \n' +
-    '    </a>\n' +
-    '</div>\n' +
     '<!-- bars/views/side_layout.html END -->');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('common/views/side_menu_widget.html');
+} catch (e) {
+  module = angular.module('common/views/side_menu_widget.html', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('common/views/side_menu_widget.html',
+    '<!-- common/views/side_menu_widget.html START --><div ng-switch="isauth">\n' +
+    '    <div ng-switch-when="true">\n' +
+    '        \n' +
+    '\n' +
+    '        <a href="javascript:void(0)" class="btn btn-success btn-raised ar-same-width-1">\n' +
+    '            <div class="icon-preview ar-icon-medium">\n' +
+    '                <i class="mdi-communication-forum"></i>\n' +
+    '                <span translate>New posts</span>\n' +
+    '                <span class="badge">3</span>\n' +
+    '            </div>\n' +
+    '        </a>\n' +
+    '\n' +
+    '        <div class="btn-group-vertical ar-same-width-1">\n' +
+    '            <a href="javascript:void(0)" class="btn btn-default btn-raised">\n' +
+    '                \n' +
+    '                <div class="icon-preview ar-icon-medium">\n' +
+    '                    <i class="mdi-communication-email"></i>\n' +
+    '                    <span translate>Messages</span>\n' +
+    '                </div>\n' +
+    '\n' +
+    '            </a>\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '            <a href="javascript:void(0)" class="btn btn-default btn-raised">\n' +
+    '                \n' +
+    '                <div class="icon-preview ar-icon-medium">\n' +
+    '                    <i class="mdi-notification-folder-special"></i>\n' +
+    '                    <span translate>Bookmarks</span>\n' +
+    '                    <span class="label label-default">beta</span>\n' +
+    '                </div>\n' +
+    '                \n' +
+    '            </a>\n' +
+    '\n' +
+    '            <a href="javascript:void(0)" class="btn btn-default btn-raised">\n' +
+    '                \n' +
+    '                <div class="icon-preview ar-icon-medium">\n' +
+    '                    <i class="mdi-action-settings"></i>\n' +
+    '                    <span translate>Settings</span>\n' +
+    '                </div>\n' +
+    '                \n' +
+    '            </a>\n' +
+    '        </div>\n' +
+    '\n' +
+    '    </div>\n' +
+    '    <div ng-switch-default>\n' +
+    '\n' +
+    '    <div class="btn-group-vertical">\n' +
+    '\n' +
+    '            <div class="panel panel-default">\n' +
+    '                <div class="panel-heading" translate>Auth</div>\n' +
+    '                <div class="panel-body">\n' +
+    '\n' +
+    '\n' +
+    '                       \n' +
+    '                     <a href="javascript:void(0)" class="btn btn-success btn-raised" style="width:162px;" translate ui-sref="login">\n' +
+    '                     {{::(\'Login\' | translate)}}</a>\n' +
+    '\n' +
+    '                      <a href="javascript:void(0)" class="btn btn-default btn-raised" translate ui-sref="registration">\n' +
+    '                      {{::(\'Registration\' | translate)}}</a>\n' +
+    '                </div>\n' +
+    '            </div>\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '    </div>\n' +
+    '\n' +
+    '   \n' +
+    '   \n' +
+    '    </div>\n' +
+    '</div>\n' +
+    '\n' +
+    '\n' +
+    '<!-- common/views/side_menu_widget.html END -->');
 }]);
 })();
 });

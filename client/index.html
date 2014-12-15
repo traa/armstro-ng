@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-controller="AppCtrl" ng-cloak>
+<html ng-controller="AppCtrl as app" ng-cloak>
 	<head>
      
 	    <style>
@@ -79,7 +79,6 @@
         <title>ng-forum-engine</title>
 	</head>
     <body class="initial-loading" app-preloader>
-        
         <!--LOADER START-->
         <div class="preloader-curtains">
             <div class="preloader-block">
@@ -93,14 +92,14 @@
 
         <!--LAYOUT START-->
         
-        <header-navbar></header-navbar>
+        <header-navbar isauth="app.isAuthenticatedUser"></header-navbar>
         <!-- CONTENT -->
         <div class="container-fluid">
 
           <div class="row-fluid">
             <div class="col-xs-6 col-lg-2">
 
-                <sidebar></sidebar>
+                <sidebar isauth="app.isAuthenticatedUser"></sidebar>
 
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-8">
@@ -113,7 +112,7 @@
     
         </div>
 
-        <footer-bar></footer-bar>
+        <footer-bar ></footer-bar>
 
 
         <!--LAYOUT END-->

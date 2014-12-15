@@ -25,7 +25,9 @@ define(['angular'], function (angular) {
     /**
      * @namespace common.directives
      */
-    angular.module('common.directives', []);
+    angular.module('common.directives', [
+            'common/views/side_menu_widget.html'
+        ]);
     return angular.module('common', [
         'lbServices',
         'common.providers',

@@ -3,6 +3,7 @@ define([
 
     "./directives/id_gen",
     "./directives/jq_dropdown",
+    "./directives/side_menu_widget",
 
     "./filters/common_filters",
 

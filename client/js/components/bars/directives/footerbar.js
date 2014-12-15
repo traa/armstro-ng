@@ -4,7 +4,7 @@ define(['angular', '../module'], function (angular) {
 
     angular
         .module('bars.directives')
-        .directive('footerBar', [function sidebarDirective() {
+        .directive('footerBar', [function footerBarDirective() {
             return {
                 restrict: 'AE',
                 scope: {},

@@ -9,7 +9,7 @@
             <label for="inputEmail" class="col-lg-2 control-label" translate>Email</label>
 
             <div class="col-lg-10">
-                <input type="email" class="form-control" id="inputEmail" placeholder="{{::emailPlaceholder}}">
+                <input type="email" class="form-control" id="inputEmail" placeholder="{{::emailPlaceholder}}" ng-model="user.email">
             </div>
 
         </div>
@@ -17,10 +17,10 @@
         <div class="form-group">
             <label for="inputPassword" class="col-lg-2 control-label" translate>Password</label>
             <div class="col-lg-10">
-                <input type="password" class="form-control" id="inputPassword" placeholder="{{::passwordPlaceholder}}">
+                <input type="password" class="form-control" id="inputPassword" placeholder="{{::passwordPlaceholder}}" ng-model="user.password">
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" name="remember_me">
+                        <input type="checkbox" name="remember_me" ng-model="user.rememberme">
                         <span class="ripple"></span>
                         <span class="check"></span>
                         {{::('Remember me' | translate)}}
@@ -32,7 +32,7 @@
 
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
-                <button type="submit" class="btn btn-primary btn-info" translate>Enter</button>
+                <button type="submit" class="btn btn-primary btn-info" translate ng-click="login(user)">Enter</button>
             </div>
         </div>
 

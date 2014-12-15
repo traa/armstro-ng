@@ -4,7 +4,7 @@ define(['angular', '../module'], function (angular) {
 
     angular
         .module('auth.directives')
-        .directive('loginForm', ['gettextCatalog', function loginFormDir(gettextCatalog) {
+        .directive('loginForm', ['gettextCatalog', 'User', '$location', function loginFormDir(gettextCatalog, User, $location) {
             return {
                 restrict: 'AE',
                 scope: {},
@@ -14,6 +14,20 @@ define(['angular', '../module'], function (angular) {
 
                     $scope.passwordPlaceholder = gettextCatalog.getString('Enter your password to login');
 
+                    $scope.login = function (user) {
+                        User.login({
+                            rememberMe: user.rememberme
+                        }, {
+                            email: user.email,
+                            password: user.password
+                        }).$promise.then(function (data) {
+
+                            var next = $location.nextAfterLogin || '/';
+                            $location.nextAfterLogin = null;
+                            $location.path(next);
+                            
+                        });
+                    }
                 },
                 templateUrl: 'auth/views/login_form.html'
             };

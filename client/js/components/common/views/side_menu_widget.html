@@ -1,0 +1,75 @@
+﻿<div ng-switch="isauth">
+    <div ng-switch-when="true">
+        
+
+        <a href="javascript:void(0)" class="btn btn-success btn-raised ar-same-width-1">
+            <div class="icon-preview ar-icon-medium">
+                <i class="mdi-communication-forum"></i>
+                <span translate>New posts</span>
+                <span class="badge">3</span>
+            </div>
+        </a>
+
+        <div class="btn-group-vertical ar-same-width-1">
+            <a href="javascript:void(0)" class="btn btn-default btn-raised">
+                
+                <div class="icon-preview ar-icon-medium">
+                    <i class="mdi-communication-email"></i>
+                    <span translate>Messages</span>
+                </div>
+
+            </a>
+
+
+
+            <a href="javascript:void(0)" class="btn btn-default btn-raised">
+                
+                <div class="icon-preview ar-icon-medium">
+                    <i class="mdi-notification-folder-special"></i>
+                    <span translate>Bookmarks</span>
+                    <span class="label label-default">beta</span>
+                </div>
+                
+            </a>
+
+            <a href="javascript:void(0)" class="btn btn-default btn-raised">
+                
+                <div class="icon-preview ar-icon-medium">
+                    <i class="mdi-action-settings"></i>
+                    <span translate>Settings</span>
+                </div>
+                
+            </a>
+        </div>
+
+    </div>
+    <div ng-switch-default>
+
+    <div class="btn-group-vertical">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" translate>Auth</div>
+                <div class="panel-body">
+
+
+                       
+                     <a href="javascript:void(0)" class="btn btn-success btn-raised" style="width:162px;" translate ui-sref="login">
+                     {{::('Login' | translate)}}</a>
+
+                      <a href="javascript:void(0)" class="btn btn-default btn-raised" translate ui-sref="registration">
+                      {{::('Registration' | translate)}}</a>
+                </div>
+            </div>
+
+
+
+
+
+    </div>
+
+   
+   
+    </div>
+</div>
+
+

@@ -90,7 +90,7 @@ require(['bundles/nglib'],
             function (a, b, c) {
 
                     angular.element().ready(function () {
-                       
+
                         $.material.init();
 
                         angular.bootstrap(document, ['app']);

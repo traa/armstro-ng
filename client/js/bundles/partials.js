@@ -343,6 +343,9 @@ module.run(['$templateCache', function($templateCache) {
     '\n' +
     '        </ul>\n' +
     '    </div>\n' +
+    '</div>\n' +
+    '<div class="progress" style="margin-top: -20px;height: 5px;" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="XP: 160/200" jq-tooltip>\n' +
+    '    <div class="progress-bar progress-bar-success" style="width: 80%" ></div>\n' +
     '</div><!-- bars/views/header_layout.html END -->');
 }]);
 })();

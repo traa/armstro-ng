@@ -1,5 +1,62 @@
 define( [ 'angular' ], function( angular ) {(function(module) {
 try {
+  module = angular.module('app/partials/forgot_password.html');
+} catch (e) {
+  module = angular.module('app/partials/forgot_password.html', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('app/partials/forgot_password.html',
+    '<!-- app/partials/forgot_password.html START --><div ng-controller="ForgotPasswordCtrl">\n' +
+    '\n' +
+    '<div ng-switch="msg.title">\n' +
+    '    <div ng-switch-when="false">\n' +
+    '		<form class="form-horizontal">\n' +
+    '		    <fieldset>\n' +
+    '\n' +
+    '		    <legend translate>Forgot password</legend>\n' +
+    '\n' +
+    '		   		<div class="form-group">\n' +
+    '		            \n' +
+    '		            <label for="inputEmail" class="col-lg-2 control-label" translate>Email</label>\n' +
+    '\n' +
+    '		            <div class="col-lg-10">\n' +
+    '		                <input type="email" class="form-control" id="inputEmail" placeholder="{{::emailPlaceholder}}" ng-model="user.email">\n' +
+    '		            </div>\n' +
+    '\n' +
+    '		        </div>\n' +
+    '\n' +
+    '\n' +
+    '		        <div class="form-group">\n' +
+    '		            <div class="col-lg-10 col-lg-offset-2">\n' +
+    '		                <button type="submit" class="btn btn-primary btn-success" translate ng-click="resetPassword(user)">Submit</button>\n' +
+    '		            </div>\n' +
+    '		        </div>\n' +
+    '\n' +
+    '\n' +
+    '		    </fieldset>\n' +
+    '\n' +
+    '		</form>	\n' +
+    '	</div>\n' +
+    '\n' +
+    '	<div ng-switch-default>\n' +
+    '		\n' +
+    '		<h2>{{msg.title}}</h2>\n' +
+    '    	<p>{{msg.text}}</p>\n' +
+    '\n' +
+    '	</div>\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '</div>\n' +
+    '\n' +
+    '\n' +
+    '	\n' +
+    '</div><!-- app/partials/forgot_password.html END -->');
+}]);
+})();
+
+(function(module) {
+try {
   module = angular.module('app/partials/home.html');
 } catch (e) {
   module = angular.module('app/partials/home.html', []);
@@ -93,9 +150,14 @@ module.run(['$templateCache', function($templateCache) {
     '        </div>\n' +
     '\n' +
     '\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '\n' +
     '        <div class="form-group">\n' +
     '            <div class="col-lg-10 col-lg-offset-2">\n' +
-    '                <button type="submit" class="btn btn-primary btn-info" translate ng-click="login(user)">Enter</button>\n' +
+    '                <a href="javascript:void(0)" class="btn btn-default btn-raised" translate ui-sref="forgot">Forgot password</a>\n' +
+    '                <button type="submit" class="btn btn-primary btn-success" translate ng-click="login(user)">Enter</button>\n' +
     '            </div>\n' +
     '        </div>\n' +
     '\n' +
@@ -367,27 +429,27 @@ module.run(['$templateCache', function($templateCache) {
     '    </div>\n' +
     '    <div ng-switch-default>\n' +
     '\n' +
-    '    <div class="btn-group-vertical">\n' +
+    '        <div class="btn-group-vertical">\n' +
     '\n' +
-    '            <div class="panel panel-default">\n' +
-    '                <div class="panel-heading" translate>Auth</div>\n' +
-    '                <div class="panel-body">\n' +
+    '                <div class="panel panel-default">\n' +
+    '                    <div class="panel-heading" translate>Auth</div>\n' +
+    '                    <div class="panel-body">\n' +
     '\n' +
     '\n' +
-    '                       \n' +
-    '                     <a href="javascript:void(0)" class="btn btn-success btn-raised" style="width:162px;" translate ui-sref="login">\n' +
-    '                     {{::(\'Login\' | translate)}}</a>\n' +
+    '                           \n' +
+    '                         <a href="javascript:void(0)" class="btn btn-success btn-raised" style="width:162px;" translate ui-sref="login">\n' +
+    '                         {{::(\'Login\' | translate)}}</a>\n' +
     '\n' +
-    '                      <a href="javascript:void(0)" class="btn btn-default btn-raised" translate ui-sref="registration">\n' +
-    '                      {{::(\'Registration\' | translate)}}</a>\n' +
+    '                          <a href="javascript:void(0)" class="btn btn-default btn-raised" translate ui-sref="registration">\n' +
+    '                          {{::(\'Registration\' | translate)}}</a>\n' +
+    '                    </div>\n' +
     '                </div>\n' +
-    '            </div>\n' +
     '\n' +
     '\n' +
     '\n' +
     '\n' +
     '\n' +
-    '    </div>\n' +
+    '        </div>\n' +
     '\n' +
     '   \n' +
     '   \n' +

@@ -7,7 +7,7 @@ module.exports = function (server) {
     res.send('pong');
   });
 
-  router.get('/login|status|register', function (req, res) {
+  router.get('/login|status|register|forgotpasword', function (req, res) {
   	// res.sendfile(app.get('indexFile'));
   	 res.sendFile('client/index.html', { root: '../' });
   });

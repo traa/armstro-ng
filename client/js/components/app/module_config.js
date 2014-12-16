@@ -4,7 +4,9 @@
         .module('app.config', ['ui.router', 
           'app/partials/home.html',
           'app/partials/login.html',
-          'app/partials/registration.html'])
+          'app/partials/registration.html',
+          'app/partials/forgot_password.html'
+          ])
         .run(['gettextCatalog', function (gettextCatalog) {
 
             gettextCatalog.setCurrentLanguage('ru');
@@ -41,7 +43,12 @@
                 'Choose your class': 'Выберите предпочитаемый вами класс',
                 'Game class': 'Класс',
                 'Logout': 'Выход',
-                'Auth': 'Авторизация'
+                'Auth': 'Авторизация',
+                'Forgot password': 'Я забыл пароль',
+                'Great!': 'Шикарно!',
+                'Password successfully sent to your email': 'Пароль успешно отправлен на ваш почтовый ящик.',
+                'Whoa!': 'Опа!',
+                'Something went wrong. Is your email correct?': 'Что-то пошло не так. Вы ввели правильный почтовый адрес email?'
             });
         }
             ])
@@ -64,6 +71,10 @@
                   .state("registration", {
                     url: "/register",
                     templateUrl: "app/partials/registration.html"
+                  })
+                  .state("forgot", {
+                    url: "/forgotpasword",
+                    templateUrl: "app/partials/forgot_password.html"
                   });
 
 

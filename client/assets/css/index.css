@@ -33,6 +33,47 @@
   background-color: transparent;
 }
 
+.list-group-item.ar-no-padding-lr {
+  padding: 0 0px !important;
+  cursor: pointer;
+}
+
+.ar-no-padding-lr:hover {
+  background: #e5e5e5;
+}
+
+.ar-pd-r-10 {
+  padding-right: 10px !important;
+}
+
+.ar-fs-rd {
+  font-size: 17px !important;
+  margin-bottom: 0px !important;
+}
+
+.ar-fs-rd-2 {
+  font-size: 12px !important;
+}
+
+.ar-wh-rd {
+  width: 35px !important;
+  height: 35px !important;
+  line-height: 35px !important;
+  background: #0f9d58 !important;
+}
+
+.ar-wh-rd-2 {
+  width: 35px !important;
+  height: 35px !important;
+  line-height: 35px !important;
+  background: #5264ae !important;
+}
+
+.ar-ar-pos {
+    left: 90%;
+    top: 37%;
+    position: absolute;
+}
 
 /* Sticky footer styles
 -------------------------------------------------- */

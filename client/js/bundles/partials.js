@@ -63,7 +63,7 @@ try {
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('app/partials/home.html',
-    '<!-- app/partials/home.html START --><div id="tt">HOME!</div><!-- app/partials/home.html END -->');
+    '<!-- app/partials/home.html START --><div id="tt">Threads list should be here</div><!-- app/partials/home.html END -->');
 }]);
 })();
 
@@ -107,116 +107,6 @@ module.run(['$templateCache', function($templateCache) {
     '        <div class="preloader-loading-image"></div>\n' +
     '    </div>\n' +
     '</div><!-- app/views/app_preloader.html END -->');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('bars/views/footer_layout.html');
-} catch (e) {
-  module = angular.module('bars/views/footer_layout.html', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('bars/views/footer_layout.html',
-    '<!-- bars/views/footer_layout.html START --><footer class="footer">\n' +
-    '  <div class="container">\n' +
-    '   <div class="row">\n' +
-    '      <div class="col-xs-6 col-md-4">\n' +
-    '          <p>\n' +
-    '          {{::(\'Connect\' | translate)}}: <strong>193.108.209.210:5121</strong>\n' +
-    '          </p>\n' +
-    '      </div>\n' +
-    '      <div class="col-xs-6 col-md-4">\n' +
-    '            <h6 style="margin-bottom: 5px;">armstro-ng@{{::(\'@VERSION\' | translate)}}</h6>\n' +
-    '            <h5 style="margin:0;">\n' +
-    '                <i class="mdi-action-extension ar-red-footer-icon"></i>\n' +
-    '                truthatenvy\n' +
-    '            </h5>\n' +
-    '      </div>\n' +
-    '      <div class="col-xs-6 col-md-4">\n' +
-    '          \n' +
-    '         <div class="icon-preview">\n' +
-    '            <!-- <h5 style="float:right;">stagedown@gmail.com</h5>\n' +
-    '            <i class="mdi-action-bug-report ar-fs-lg ar-footer-icon"></i>  -->\n' +
-    '          </div>\n' +
-    '\n' +
-    '\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</footer><!-- bars/views/footer_layout.html END -->');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('bars/views/header_layout.html');
-} catch (e) {
-  module = angular.module('bars/views/header_layout.html', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('bars/views/header_layout.html',
-    '<!-- bars/views/header_layout.html START --><div class="navbar navbar-inverse">\n' +
-    '    <div class="navbar-header">\n' +
-    '        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">\n' +
-    '            <span class="icon-bar"></span>\n' +
-    '            <span class="icon-bar"></span>\n' +
-    '            <span class="icon-bar"></span>\n' +
-    '        </button>\n' +
-    '        <a class="navbar-brand" href="javascript:void(0)" ui-sref="home" translate>Siala</a>\n' +
-    '    </div>\n' +
-    '    <div class="navbar-collapse collapse navbar-inverse-collapse">\n' +
-    '        <ul class="nav navbar-nav">\n' +
-    '            <li class="active"><a href="javascript:void(0)" translate>Forum</a></li>\n' +
-    '        </ul>\n' +
-    '        <form class="navbar-form navbar-left">\n' +
-    '            <input type="text" class="form-control col-lg-8" placeholder="{{(\'Search\' | translate)}}">\n' +
-    '        </form>\n' +
-    '        <ul class="nav navbar-nav navbar-right" ng-show="isauth">\n' +
-    '            <!-- <li><a href="javascript:void(0)">Link</a></li> -->\n' +
-    '            <li class="dropdown">\n' +
-    '                <a href="javascript:void(0)" class="dropdown-toggle ar-five-paddings" data-toggle="dropdown">\n' +
-    '                    \n' +
-    '                            <div class="row-picture">\n' +
-    '                                <img class="circle ar-force-round" src="http://lorempixel.com/56/56/people/1" alt="icon">\n' +
-    '                                <i class="mdi-navigation-expand-more ar-fs-lg"></i>\n' +
-    '                                \n' +
-    '                            </div>\n' +
-    '                    \n' +
-    '                </a>\n' +
-    '\n' +
-    '                <ul class="dropdown-menu">\n' +
-    '                    <!-- <li><a href="javascript:void(0)">Action</a></li> -->\n' +
-    '                    <li class="divider"></li>\n' +
-    '                    <li><a href="javascript:void(0)" ng-click="logout()" translate>Logout</a></li>\n' +
-    '                </ul>\n' +
-    '            </li>\n' +
-    '\n' +
-    '        </ul>\n' +
-    '    </div>\n' +
-    '</div>\n' +
-    '<div class="progress" style="margin-top: -20px;height: 5px;" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="XP: 160/200" jq-tooltip>\n' +
-    '    <div class="progress-bar progress-bar-success" style="width: 80%" ></div>\n' +
-    '</div><!-- bars/views/header_layout.html END -->');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('bars/views/side_layout.html');
-} catch (e) {
-  module = angular.module('bars/views/side_layout.html', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('bars/views/side_layout.html',
-    '<!-- bars/views/side_layout.html START -->\n' +
-    '\n' +
-    '<!-- <side-menu-widget isauth="isauth"></side-menu-widget> -->\n' +
-    '\n' +
-    ' <side-forum-list isauth="isauth"></side-forum-list> \n' +
-    '\n' +
-    '\n' +
-    '<!-- bars/views/side_layout.html END -->');
 }]);
 })();
 
@@ -371,6 +261,116 @@ module.run(['$templateCache', function($templateCache) {
 
 (function(module) {
 try {
+  module = angular.module('bars/views/footer_layout.html');
+} catch (e) {
+  module = angular.module('bars/views/footer_layout.html', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('bars/views/footer_layout.html',
+    '<!-- bars/views/footer_layout.html START --><footer class="footer">\n' +
+    '  <div class="container">\n' +
+    '   <div class="row">\n' +
+    '      <div class="col-xs-6 col-md-4">\n' +
+    '          <p>\n' +
+    '          {{::(\'Connect\' | translate)}}: <strong>193.108.209.210:5121</strong>\n' +
+    '          </p>\n' +
+    '      </div>\n' +
+    '      <div class="col-xs-6 col-md-4">\n' +
+    '            <h6 style="margin-bottom: 5px;">armstro-ng@{{::(\'@VERSION\' | translate)}}</h6>\n' +
+    '            <h5 style="margin:0;">\n' +
+    '                <i class="mdi-action-extension ar-red-footer-icon"></i>\n' +
+    '                truthatenvy\n' +
+    '            </h5>\n' +
+    '      </div>\n' +
+    '      <div class="col-xs-6 col-md-4">\n' +
+    '          \n' +
+    '         <div class="icon-preview">\n' +
+    '            <!-- <h5 style="float:right;">stagedown@gmail.com</h5>\n' +
+    '            <i class="mdi-action-bug-report ar-fs-lg ar-footer-icon"></i>  -->\n' +
+    '          </div>\n' +
+    '\n' +
+    '\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</footer><!-- bars/views/footer_layout.html END -->');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('bars/views/header_layout.html');
+} catch (e) {
+  module = angular.module('bars/views/header_layout.html', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('bars/views/header_layout.html',
+    '<!-- bars/views/header_layout.html START --><div class="navbar navbar-inverse">\n' +
+    '    <div class="navbar-header">\n' +
+    '        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">\n' +
+    '            <span class="icon-bar"></span>\n' +
+    '            <span class="icon-bar"></span>\n' +
+    '            <span class="icon-bar"></span>\n' +
+    '        </button>\n' +
+    '        <a class="navbar-brand" href="javascript:void(0)" ui-sref="home" translate>Siala</a>\n' +
+    '    </div>\n' +
+    '    <div class="navbar-collapse collapse navbar-inverse-collapse">\n' +
+    '        <ul class="nav navbar-nav">\n' +
+    '            <li class="active"><a href="javascript:void(0)" translate>Forum</a></li>\n' +
+    '        </ul>\n' +
+    '        <form class="navbar-form navbar-left">\n' +
+    '            <input type="text" class="form-control col-lg-8" placeholder="{{(\'Search\' | translate)}}">\n' +
+    '        </form>\n' +
+    '        <ul class="nav navbar-nav navbar-right" ng-show="isauth">\n' +
+    '            <!-- <li><a href="javascript:void(0)">Link</a></li> -->\n' +
+    '            <li class="dropdown">\n' +
+    '                <a href="javascript:void(0)" class="dropdown-toggle ar-five-paddings" data-toggle="dropdown">\n' +
+    '                    \n' +
+    '                            <div class="row-picture">\n' +
+    '                                <img class="circle ar-force-round" src="http://lorempixel.com/56/56/people/1" alt="icon">\n' +
+    '                                <i class="mdi-navigation-expand-more ar-fs-lg"></i>\n' +
+    '                                \n' +
+    '                            </div>\n' +
+    '                    \n' +
+    '                </a>\n' +
+    '\n' +
+    '                <ul class="dropdown-menu">\n' +
+    '                    <!-- <li><a href="javascript:void(0)">Action</a></li> -->\n' +
+    '                    <li class="divider"></li>\n' +
+    '                    <li><a href="javascript:void(0)" ng-click="logout()" translate>Logout</a></li>\n' +
+    '                </ul>\n' +
+    '            </li>\n' +
+    '\n' +
+    '        </ul>\n' +
+    '    </div>\n' +
+    '</div>\n' +
+    '<div class="progress" style="margin-top: -20px;height: 5px;" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="XP: 160/200" jq-tooltip>\n' +
+    '    <div class="progress-bar progress-bar-success" style="width: 80%" ></div>\n' +
+    '</div><!-- bars/views/header_layout.html END -->');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('bars/views/side_layout.html');
+} catch (e) {
+  module = angular.module('bars/views/side_layout.html', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('bars/views/side_layout.html',
+    '<!-- bars/views/side_layout.html START -->\n' +
+    '\n' +
+    '<!-- <side-menu-widget isauth="isauth"></side-menu-widget> -->\n' +
+    '\n' +
+    ' <side-forum-list isauth="isauth"></side-forum-list> \n' +
+    '\n' +
+    '\n' +
+    '<!-- bars/views/side_layout.html END -->');
+}]);
+})();
+
+(function(module) {
+try {
   module = angular.module('common/views/side_forum_list.html');
 } catch (e) {
   module = angular.module('common/views/side_forum_list.html', []);
@@ -380,54 +380,55 @@ module.run(['$templateCache', function($templateCache) {
     '<!-- common/views/side_forum_list.html START --><div ng-switch="isauth">\n' +
     '    <div ng-switch-when="true">\n' +
     '        \n' +
-    '        <div class="list-group">\n' +
+    '        <div class="well">\n' +
+    '            <div class="list-group">\n' +
     '\n' +
-    '            <div class="list-group-item ar-no-padding-lr">\n' +
-    '                <div class="row-action-primary ar-pd-r-10">\n' +
-    '                    <i class="mdi-action-assignment-late ar-wh-rd-2"></i>\n' +
+    '                <div class="list-group-item ar-no-padding-lr">\n' +
+    '                    <div class="row-action-primary ar-pd-r-10">\n' +
+    '                        <i class="mdi-action-assignment-late ar-wh-rd-2"></i>\n' +
+    '                    </div>\n' +
+    '                    <div class="row-content">\n' +
+    '                        \n' +
+    '                        <h5 class="list-group-item-heading ar-fs-rd">Новости</h5>\n' +
+    '                        <p class="list-group-item-text ar-fs-rd-2">Апдейты, ивенты и прочие новости от администрации.</p>\n' +
+    '                    </div>\n' +
+    '                    <i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
     '                </div>\n' +
-    '                <div class="row-content">\n' +
-    '                    \n' +
-    '                    <h5 class="list-group-item-heading ar-fs-rd">Новости</h5>\n' +
-    '                    <p class="list-group-item-text ar-fs-rd-2">Апдейты, ивенты и прочие новости от администрации.</p>\n' +
+    '\n' +
+    '\n' +
+    '                <div class="list-group-separator"></div>\n' +
+    '\n' +
+    '                <div class="list-group-item ar-no-padding-lr">\n' +
+    '                    <div class="row-action-primary ar-pd-r-10">\n' +
+    '                        <i class="mdi-action-extension ar-wh-rd"></i>\n' +
+    '                    </div>\n' +
+    '                    <div class="row-content">\n' +
+    '                        \n' +
+    '                        <h5 class="list-group-item-heading ar-fs-rd">Общий форум</h5>\n' +
+    '                        <p class="list-group-item-text ar-fs-rd-2">Дискуссии обо всем в игре. Флуд запрещен.</p>\n' +
+    '                    </div>\n' +
+    '                    <i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
     '                </div>\n' +
-    '                <i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
-    '            </div>\n' +
     '\n' +
     '\n' +
-    '            <div class="list-group-separator"></div>\n' +
+    '                <div class="list-group-separator"></div>\n' +
     '\n' +
-    '            <div class="list-group-item ar-no-padding-lr">\n' +
-    '                <div class="row-action-primary ar-pd-r-10">\n' +
-    '                    <i class="mdi-action-extension ar-wh-rd"></i>\n' +
+    '\n' +
+    '                <div class="list-group-item ar-no-padding-lr">\n' +
+    '                    <div class="row-action-primary ar-pd-r-10">\n' +
+    '                        <i class="mdi-action-extension ar-wh-rd"></i>\n' +
+    '                    </div>\n' +
+    '                    <div class="row-content">\n' +
+    '                     \n' +
+    '                        <h5 class="list-group-item-heading ar-fs-rd">Уголок Манча</h5>\n' +
+    '                        <p class="list-group-item-text ar-fs-rd-2">Билды, таблицы и стратегии развития персонажа.</p>\n' +
+    '                    </div>\n' +
+    '                    <i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
     '                </div>\n' +
-    '                <div class="row-content">\n' +
-    '                    \n' +
-    '                    <h5 class="list-group-item-heading ar-fs-rd">Общий форум</h5>\n' +
-    '                    <p class="list-group-item-text ar-fs-rd-2">Дискуссии обо всем в игре. Флуд запрещен.</p>\n' +
-    '                </div>\n' +
-    '                <i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
-    '            </div>\n' +
     '\n' +
-    '\n' +
-    '            <div class="list-group-separator"></div>\n' +
-    '\n' +
-    '\n' +
-    '            <div class="list-group-item ar-no-padding-lr">\n' +
-    '                <div class="row-action-primary ar-pd-r-10">\n' +
-    '                    <i class="mdi-action-extension ar-wh-rd"></i>\n' +
-    '                </div>\n' +
-    '                <div class="row-content">\n' +
-    '                 \n' +
-    '                    <h5 class="list-group-item-heading ar-fs-rd">Уголок Манча</h5>\n' +
-    '                    <p class="list-group-item-text ar-fs-rd-2">Билды, таблицы и стратегии развития персонажа.</p>\n' +
-    '                </div>\n' +
-    '                <i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
-    '            </div>\n' +
-    '\n' +
-    '            <div class="list-group-separator"></div>\n' +
+    '                <div class="list-group-separator"></div>\n' +
+    '        </div>\n' +
     '    </div>\n' +
-    '\n' +
     '\n' +
     '    </div>\n' +
     '    <div ng-switch-default>\n' +

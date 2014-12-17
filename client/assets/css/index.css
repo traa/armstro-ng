@@ -39,7 +39,7 @@
 }
 
 .ar-no-padding-lr:hover {
-  background: #e5e5e5;
+  background: #f6f6f6;
 }
 
 .ar-pd-r-10 {
@@ -73,6 +73,10 @@
     left: 90%;
     top: 37%;
     position: absolute;
+}
+
+.ar-pd-lf-rd {
+  padding-left: 5px !important;
 }
 
 /* Sticky footer styles

@@ -18,6 +18,10 @@ require.config({
         {
             name: 'auth',
             location: 'components/auth'
+        },
+        {
+            name: 'nwn',
+            location: 'components/nwn'
         }
     ],
     paths: {
@@ -51,7 +55,7 @@ require.config({
         },
 
         jqDropdown: {
-            deps: ['jquery']
+            deps: ['jquery', 'bootstrap']
         },
 
         ngResource: {

@@ -32,11 +32,7 @@
             <label for="gameclass" class="col-lg-2 control-label" translate>Game class</label>
 
             <div class="col-lg-10">
-                <select ng-model="user.gameclass" class="select form-control floating-label" placeholder="{{::('Choose your class' | translate)}}" jq-dropdown id="gameclass">
-                    <option value="paladin">Paladin</option>
-                    <option value="fighter">Fighter</option>
-                    <option value="wizard">Wizard</option>
-                </select>
+                <nwn-class-choose-input gameclass="user.gameclass"></nwn-class-choose-input>
             </div>
             
         </div>

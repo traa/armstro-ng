@@ -17,8 +17,10 @@ define(['angular', '../module'], function (angular) {
                     $scope.passwordPlaceholder = gettextCatalog.getString('Enter your password to signup');
 
                     $scope.reg = function(user) {
+
+                        console.log(user);
                         
-                        if (user.password === user.passwordrepeat 
+                        if (false && user.password === user.passwordrepeat 
                             && user.email
                             && user.iagree 
                             && user.gameclass) {

@@ -212,11 +212,7 @@ module.run(['$templateCache', function($templateCache) {
     '            <label for="gameclass" class="col-lg-2 control-label" translate>Game class</label>\n' +
     '\n' +
     '            <div class="col-lg-10">\n' +
-    '                <select ng-model="user.gameclass" class="select form-control floating-label" placeholder="{{::(\'Choose your class\' | translate)}}" jq-dropdown id="gameclass">\n' +
-    '                    <option value="paladin">Paladin</option>\n' +
-    '                    <option value="fighter">Fighter</option>\n' +
-    '                    <option value="wizard">Wizard</option>\n' +
-    '                </select>\n' +
+    '                <nwn-class-choose-input gameclass="user.gameclass"></nwn-class-choose-input>\n' +
     '            </div>\n' +
     '            \n' +
     '        </div>\n' +
@@ -530,6 +526,43 @@ module.run(['$templateCache', function($templateCache) {
     '\n' +
     '\n' +
     '<!-- common/views/side_menu_widget.html END -->');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('nwn/views/class_choose_input.html');
+} catch (e) {
+  module = angular.module('nwn/views/class_choose_input.html', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('nwn/views/class_choose_input.html',
+    '<!-- nwn/views/class_choose_input.html START --><select ng-model="gameclass" class="select form-control floating-label" placeholder="{{::(\'Choose your class\' | translate)}}" jq-dropdown id="gameclass_input">\n' +
+    '                    <option value="arcanearcher">Arcane Archer</option>\n' +
+    '                    <option value="assassin">Assassin</option>\n' +
+    '                    <option value="barbarian">Barbarian</option>\n' +
+    '                    <option value="bard">Bard</option>\n' +
+    '                    <option value="blackguard">Blackguard</option>\n' +
+    '                    <option value="championoftorm">Champion of Torm</option>\n' +
+    '                    <option value="cleric">Cleric</option>\n' +
+    '                    <option value="druid">Druid</option>\n' +
+    '                    <option value="dwarverdefender">Dwarven Defender</option>\n' +
+    '                    <option value="druid">Druid</option>\n' +
+    '                    <option value="fighter">Fighter</option>\n' +
+    '                    <option value="harperscout">Harper Scout</option>\n' +
+    '                    <option value="monk">Monk</option>\n' +
+    '                    <option value="paladin">Paladin</option>\n' +
+    '                    <option value="palemaster">Pale Master</option>\n' +
+    '                    <option value="ranger">Ranger</option>\n' +
+    '                    <option value="reddragondisciple">Red Dragon Disciple</option>\n' +
+    '                    <option value="rogue">Rogue</option>\n' +
+    '                    <option value="shadowdancer">Shadowdancer</option>\n' +
+    '                    <option value="shifter">Shifter</option>\n' +
+    '                    <option value="sorcerer">Sorcerer</option>\n' +
+    '                    <option value="weaponmaster">Weapon Master</option>\n' +
+    '                    <option value="wizard">Wizard</option>\n' +
+    '</select>\n' +
+    '<!-- nwn/views/class_choose_input.html END -->');
 }]);
 })();
 });

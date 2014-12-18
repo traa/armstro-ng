@@ -2,5 +2,6 @@ define([
     "app",
     "common",
     "bars",
-    "auth"
+    "auth",
+    "nwn"
 ], function() { });

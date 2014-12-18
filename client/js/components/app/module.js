@@ -13,6 +13,7 @@ define(['angular'], function (angular) {
         'app.controllers',
         'app.directives',
         'bars',
-        'auth'
+        'auth',
+        'nwn'
     ]);
 });

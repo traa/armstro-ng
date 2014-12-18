@@ -4,23 +4,25 @@ define(['angular', '../module'], function (angular) {
 
     angular
         .module('common.directives')
-        .directive('jqDropdown', [function jqDropdownDir() {
+        .directive('jqDropdown', ['$timeout', function jqDropdownDir($timeout) {
             return {
                 restrict: 'A',
                 require: 'ngModel',
                 link: function ($scope, $elem, $attrs, ngModel) {
 
-                    $elem.dropdown({
-                        "change": function (val) {
-                            $scope.$apply(function() {
-                                ngModel.$setViewValue(val);
-                            });
-                            
-                        },
-                        "callback": function ($dropdown) {                                                       
-                            
-                        }
-                    });
+                   
+                        $elem.dropdown({
+                            "change": function (val) {
+                                $scope.$apply(function() {
+                                    ngModel.$setViewValue(val);
+                                });
+                                
+                            },
+                            "callback": function ($dropdown) {                                                       
+                                
+                            }
+                        });
+                
 
                     ngModel.$render = function () {
                         ngModel.$setViewValue($elem.val());

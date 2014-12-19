@@ -63,7 +63,132 @@ try {
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('app/partials/home.html',
-    '<!-- app/partials/home.html START --><div id="tt">Threads list should be here</div><!-- app/partials/home.html END -->');
+    '<!-- app/partials/home.html START --><div class="panel panel-default ar-mr-rd">\n' +
+    '    <div class="panel-body ar-pd-rd">\n' +
+    '\n' +
+    '	    <div class="col-md-1">\n' +
+    '	    	<i class="mdi-communication-comment ar-spec-blue"></i>\n' +
+    '	    	<span class="label label-success"><i class="mdi-maps-beenhere"></i></span>\n' +
+    '	    </div>\n' +
+    '	    <div class="col-md-7">\n' +
+    '	    	<a href="javascript:;" class="ar-incr-we">Таблица крафта.</a>\n' +
+    '	        <div>\n' +
+    '	        	<small>Информация, связанная с крафт системой Сиалы</small>\n' +
+    '	        </div>\n' +
+    '	    </div>\n' +
+    '	    <div class="col-md-4">\n' +
+    '	        	<ul class="nav nav-pills ar-rd-sz"> \n' +
+    '	        		<li class="">\n' +
+    '	        			<a href="javascript:void(0)" class="ar-pd-lnk-rd">Постов <span class="badge">5</span></a>\n' +
+    '	        		</li> \n' +
+    '	        	</ul>\n' +
+    '	        	<div class="ar-fl-r">\n' +
+    '	        		<small>Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 12:19" jq-tooltip>Sentinel <i class="mdi-social-person"></i></a></small>\n' +
+    '	        	</div>\n' +
+    '	        	<i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
+    '	    </div>\n' +
+    '\n' +
+    '        \n' +
+    '\n' +
+    '    </div>\n' +
+    '</div>\n' +
+    '\n' +
+    '<div class="panel panel-default ar-mr-rd">\n' +
+    '    <div class="panel-body ar-pd-rd">\n' +
+    '\n' +
+    '	    <div class="col-md-1">\n' +
+    '	    	<i class="mdi-communication-comment ar-spec-blue"></i>\n' +
+    '	    	<span class="label label-success">!</span>\n' +
+    '	    </div>\n' +
+    '	    <div class="col-md-7">\n' +
+    '	    	<a href="javascript:;" class="ar-incr-we">FAQ по билдам и классам.</a>\n' +
+    '	        <div>\n' +
+    '	        	<small>Краткий гайд о том как не запороть персонажа.</small>\n' +
+    '	        </div>\n' +
+    '	    </div>\n' +
+    '	    <div class="col-md-4">\n' +
+    '	        	<ul class="nav nav-pills ar-rd-sz"> \n' +
+    '	        		<li class="">\n' +
+    '	        			<a href="javascript:void(0)" class="ar-pd-lnk-rd">Постов <span class="badge">3</span></a>\n' +
+    '	        		</li> \n' +
+    '	        	</ul>\n' +
+    '	        	<div class="ar-fl-r">\n' +
+    '	        		<small>Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 3:27" jq-tooltip>traa <i class="mdi-social-person"></i></a></small>\n' +
+    '	        	</div>\n' +
+    '	        	<i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
+    '	    </div>\n' +
+    '\n' +
+    '        \n' +
+    '\n' +
+    '    </div>\n' +
+    '</div>\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '<div class="panel panel-default ar-mr-rd">\n' +
+    '    <div class="panel-body ar-pd-rd">\n' +
+    '\n' +
+    '	    <div class="col-md-1">\n' +
+    '	    	<i class="mdi-communication-comment ar-spec-blue"></i>\n' +
+    '	    	\n' +
+    '	    </div>\n' +
+    '	    <div class="col-md-7">\n' +
+    '	    	<a href="javascript:;" class="ar-incr-we">Информация о подключении.</a>\n' +
+    '	        <div>\n' +
+    '	        	<small>Ссылки, гайды и прочие материалы, необходимые для подключения к шарду.</small>\n' +
+    '	        </div>\n' +
+    '	    </div>\n' +
+    '	    <div class="col-md-4">\n' +
+    '	        	<ul class="nav nav-pills ar-rd-sz"> \n' +
+    '	        		<li class="">\n' +
+    '	        			<a href="javascript:void(0)" class="ar-pd-lnk-rd">Постов <span class="badge">1</span></a>\n' +
+    '	        		</li> \n' +
+    '	        	</ul>\n' +
+    '	        	<div class="ar-fl-r">\n' +
+    '	        		<small>Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 3:19" jq-tooltip>traa <i class="mdi-social-person"></i></a></small>\n' +
+    '	        	</div>\n' +
+    '	        	<i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
+    '	    </div>\n' +
+    '\n' +
+    '        \n' +
+    '\n' +
+    '    </div>\n' +
+    '</div>\n' +
+    '\n' +
+    '<div class="panel panel-default ar-mr-rd">\n' +
+    '    <div class="panel-body ar-pd-rd">\n' +
+    '\n' +
+    '	    <div class="col-md-1">\n' +
+    '	    	<i class="mdi-communication-comment ar-spec-blue"></i>\n' +
+    '	    	<span class="label label-success">!</span>\n' +
+    '	    </div>\n' +
+    '	    <div class="col-md-7">\n' +
+    '	    	<a href="javascript:;" class="ar-incr-we">Обсуждение нового форума.</a>\n' +
+    '	        <div>\n' +
+    '	        	<small>Все идеи, предложения и пожелания могут быть обсуждены здесь.</small>\n' +
+    '	        </div>\n' +
+    '	    </div>\n' +
+    '	    <div class="col-md-4">\n' +
+    '	        	<ul class="nav nav-pills ar-rd-sz"> \n' +
+    '	        		<li class="">\n' +
+    '	        			<a href="javascript:void(0)" class="ar-pd-lnk-rd">Постов <span class="badge">13</span></a>\n' +
+    '	        		</li> \n' +
+    '	        	</ul>\n' +
+    '	        	<div class="ar-fl-r">\n' +
+    '	        		<small>Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 2:19" jq-tooltip>traa <i class="mdi-social-person"></i></a></small>\n' +
+    '	        	</div>\n' +
+    '	        	<i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
+    '	    </div>\n' +
+    '\n' +
+    '        \n' +
+    '\n' +
+    '    </div>\n' +
+    '</div>\n' +
+    '\n' +
+    '\n' +
+    '<!-- app/partials/home.html END -->');
 }]);
 })();
 

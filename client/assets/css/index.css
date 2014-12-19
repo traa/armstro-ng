@@ -79,6 +79,42 @@
   padding-left: 5px !important;
 }
 
+.ar-pd-rd {
+  padding: 7px !important;
+}
+
+.ar-mr-rd {
+  margin-bottom: 10px !important;
+  cursor: pointer;
+}
+
+.ar-mr-rd:hover {
+  background: #f6f6f6;
+}
+
+.ar-incr-we {
+  font-weight: 400;
+}
+
+.ar-spec-blue {
+  color: #5264ae !important;
+}
+
+.ar-pd-lnk-rd {
+  padding: 5px 5px !important;
+
+}
+
+.ar-rd-sz {
+  font-size: 12px;
+  width: 85px;
+  float: right;
+}
+
+.ar-fl-r {
+  float: right;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

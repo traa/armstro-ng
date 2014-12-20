@@ -9,7 +9,7 @@ define(['angular', '../module'], function (angular) {
                 enter: function (element, done) {
 
                     var leftAnim = $q.defer(),
-                        rightAnim = $q.defer(),
+                        centerAnim = $q.defer(),
                         forumListAnim = $q.defer();
                     
                     element.animate({
@@ -30,15 +30,22 @@ define(['angular', '../module'], function (angular) {
                             
                     });
 
+                    $('#centerPane').animate({
+                        width: '41%'
+                    }, function () {
+                        centerAnim.resolve();
+                        $(this).removeClass('col-lg-6').addClass('col-lg-5')
+                    });
+
                    
 
-                    $q.all([leftAnim, forumListAnim]).then(function () {
+                    $q.all([leftAnim, forumListAnim, centerAnim]).then(function () {
                         
 
                         $('#rightPane').animate({
-                            width: '42%'
+                            width: '51%'
                         }, function () {
-                            $('#rightPane').removeClass('col-lg-3').addClass('col-lg-5');
+                            $('#rightPane').removeClass('col-lg-3').addClass('col-lg-6');
                         });
                     });
 

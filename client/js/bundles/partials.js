@@ -83,7 +83,7 @@ module.run(['$templateCache', function($templateCache) {
     '	        		</li> \n' +
     '	        	</ul>\n' +
     '	        	<div class="ar-fl-r">\n' +
-    '	        		<small>Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 12:19" jq-tooltip>Sentinel <i class="mdi-social-person"></i></a></small>\n' +
+    '	        		<small class="ar-rd-fs">Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 12:19" jq-tooltip>Sentinel <i class="mdi-social-person"></i></a></small>\n' +
     '	        	</div>\n' +
     '	        	<i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
     '	    </div>\n' +
@@ -113,7 +113,7 @@ module.run(['$templateCache', function($templateCache) {
     '	        		</li> \n' +
     '	        	</ul>\n' +
     '	        	<div class="ar-fl-r">\n' +
-    '	        		<small>Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 3:27" jq-tooltip>traa <i class="mdi-social-person"></i></a></small>\n' +
+    '	        		<small class="ar-rd-fs">Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 3:27" jq-tooltip>traa <i class="mdi-social-person"></i></a></small>\n' +
     '	        	</div>\n' +
     '	        	<i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
     '	    </div>\n' +
@@ -147,7 +147,7 @@ module.run(['$templateCache', function($templateCache) {
     '	        		</li> \n' +
     '	        	</ul>\n' +
     '	        	<div class="ar-fl-r">\n' +
-    '	        		<small>Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 3:19" jq-tooltip>traa <i class="mdi-social-person"></i></a></small>\n' +
+    '	        		<small class="ar-rd-fs">Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 3:19" jq-tooltip>traa <i class="mdi-social-person"></i></a></small>\n' +
     '	        	</div>\n' +
     '	        	<i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
     '	    </div>\n' +
@@ -177,7 +177,7 @@ module.run(['$templateCache', function($templateCache) {
     '	        		</li> \n' +
     '	        	</ul>\n' +
     '	        	<div class="ar-fl-r">\n' +
-    '	        		<small>Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 2:19" jq-tooltip>traa <i class="mdi-social-person"></i></a></small>\n' +
+    '	        		<small class="ar-rd-fs">Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 2:19" jq-tooltip>traa <i class="mdi-social-person"></i></a></small>\n' +
     '	        	</div>\n' +
     '	        	<i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
     '	    </div>\n' +
@@ -448,7 +448,7 @@ module.run(['$templateCache', function($templateCache) {
     '                <a href="javascript:void(0)" class="dropdown-toggle ar-five-paddings" data-toggle="dropdown">\n' +
     '                    \n' +
     '                            <div class="row-picture">\n' +
-    '                                <img class="circle ar-force-round" src="http://lorempixel.com/56/56/people/1" alt="icon">\n' +
+    '                                <img class="circle ar-force-round" src="http://lorempixel.com/56/56/people/3" alt="icon">\n' +
     '                                <i class="mdi-navigation-expand-more ar-fs-lg"></i>\n' +
     '                                \n' +
     '                            </div>\n' +

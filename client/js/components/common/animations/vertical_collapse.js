@@ -6,16 +6,26 @@ define(['angular', '../module'], function (angular) {
         .module('common.animations')
         .animation('.ar-vertical-collapse', [function vertCollapseAnim() {
             return {
-                enter: function (element, parentElement, afterElement) {
-                    console.log(element, parentElement, afterElement);
+                enter: function (element, done) {
+
+                    $('#leftPane').animate({
+                        width: '8%'
+                    });
+
+                    $('#rightPane').animate({
+                        width: '42%'
+                    });
+                    
+                    element.animate({
+                        width: '75px'
+                    }, done);
+                    
                 },
                 /**
                 *   fired first
                 **/
-                leave: function (element) {
-                    element.animate({
-                        width: '75px'
-                    })
+                leave: function (element, done) {
+                  done();
                 }
             };
         }]);

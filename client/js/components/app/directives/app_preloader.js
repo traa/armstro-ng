@@ -24,7 +24,7 @@
                     };
 
                     
-                    $timeout.cancel(promiseToRemovePreloader);
+                    //$timeout.cancel(promiseToRemovePreloader);
                     $timeout($scope.removePreloader.bind($scope), 300);
 
 

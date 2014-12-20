@@ -1,8 +1,9 @@
 define([
 	"bootstrap",
-	"ripples",
-	"material",
-	"jqDropdown"
+	"scripts",
+	"pace",
+	"gridalicious",
+	"nanoscroller"
 ], function () {
 
 });

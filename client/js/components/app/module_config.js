@@ -17,8 +17,10 @@
                 '@Actions': '@Действия',
                 'Messages': 'Сообщения',
                 'Bookmarks': 'Закладки',
+                "What's new": "Новое",
                 'Login': 'Вход',
                 'Email': 'Email',
+                'Navigation': 'Навигация',
                 'Submit': 'Отправить',
                 'Enter': 'Войти',
                 'Enter your email address to signup': 'Введите ваш адрес email. Он также будет вашим логином.',
@@ -37,6 +39,7 @@
                 'Settings': 'Настройки',
                 'Siala': 'Siala 2.0',
                 'Forum': 'Форум',
+                'Forums': 'Форумы',
                 'Search': 'Поиск...',
                 'Connect': 'Подключение',
                 'Send': 'Отправить',
@@ -48,14 +51,17 @@
                 'Great!': 'Шикарно!',
                 'Password successfully sent to your email': 'Пароль успешно отправлен на ваш почтовый ящик.',
                 'Whoa!': 'Опа!',
+                'Knowledge base': 'База знаний',
                 'Something went wrong. Is your email correct?': 'Что-то пошло не так. Вы ввели правильный почтовый адрес email?'
             });
         }
             ])
-        .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider',
-             function ($stateProvider,   $urlRouterProvider, $locationProvider, $httpProvider) {
+        .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 'cfpLoadingBarProvider',
+             function ($stateProvider,   $urlRouterProvider, $locationProvider, $httpProvider, cfpLoadingBarProvider) {
 
-              
+              cfpLoadingBarProvider.includeBar = true;
+              cfpLoadingBarProvider.includeSpinner = true;
+              cfpLoadingBarProvider.latencyThreshold = 100;
 
               $urlRouterProvider.otherwise("/");
 

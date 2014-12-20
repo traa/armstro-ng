@@ -219,24 +219,6 @@ module.run(['$templateCache', function($templateCache) {
 
 (function(module) {
 try {
-  module = angular.module('app/views/app_preloader.html');
-} catch (e) {
-  module = angular.module('app/views/app_preloader.html', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('app/views/app_preloader.html',
-    '<!-- app/views/app_preloader.html START --><div class="preloader-curtains">\n' +
-    '    <div class="preloader-block">\n' +
-    '        <div class="preloader-ad-logo"></div>\n' +
-    '        <div class="preloader-loading-text">Loading ...</div>\n' +
-    '        <div class="preloader-loading-image"></div>\n' +
-    '    </div>\n' +
-    '</div><!-- app/views/app_preloader.html END -->');
-}]);
-})();
-
-(function(module) {
-try {
   module = angular.module('auth/views/login_form.html');
 } catch (e) {
   module = angular.module('auth/views/login_form.html', []);
@@ -426,48 +408,425 @@ try {
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('bars/views/header_layout.html',
-    '<!-- bars/views/header_layout.html START --><div class="navbar navbar-inverse">\n' +
-    '    <div class="navbar-header">\n' +
-    '        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">\n' +
-    '            <span class="icon-bar"></span>\n' +
-    '            <span class="icon-bar"></span>\n' +
-    '            <span class="icon-bar"></span>\n' +
+    '<!-- bars/views/header_layout.html START --><header class="navbar" id="header-navbar">\n' +
+    '    <div class="container">\n' +
+    '        <a href="javascript:;" id="logo" class="navbar-brand" ui-sref="home">\n' +
+    '            <h4>Siala 2.0</h4>\n' +
+    '        </a>\n' +
+    '        \n' +
+    '        <div class="clearfix">\n' +
+    '        <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">\n' +
+    '            <span class="sr-only">Toggle navigation</span>\n' +
+    '            <span class="fa fa-bars"></span>\n' +
     '        </button>\n' +
-    '        <a class="navbar-brand" href="javascript:void(0)" ui-sref="home" translate>Siala</a>\n' +
-    '    </div>\n' +
-    '    <div class="navbar-collapse collapse navbar-inverse-collapse">\n' +
-    '        <ul class="nav navbar-nav">\n' +
-    '            <li class="active"><a href="javascript:void(0)" translate>Forum</a></li>\n' +
-    '        </ul>\n' +
-    '        <form class="navbar-form navbar-left">\n' +
-    '            <input type="text" class="form-control col-lg-8" placeholder="{{(\'Search\' | translate)}}">\n' +
-    '        </form>\n' +
-    '        <ul class="nav navbar-nav navbar-right" ng-show="isauth">\n' +
-    '            <!-- <li><a href="javascript:void(0)">Link</a></li> -->\n' +
-    '            <li class="dropdown">\n' +
-    '                <a href="javascript:void(0)" class="dropdown-toggle ar-five-paddings" data-toggle="dropdown">\n' +
-    '                    \n' +
-    '                            <div class="row-picture">\n' +
-    '                                <img class="circle ar-force-round" src="http://lorempixel.com/56/56/people/3" alt="icon">\n' +
-    '                                <i class="mdi-navigation-expand-more ar-fs-lg"></i>\n' +
-    '                                \n' +
+    '        \n' +
+    '        <div class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs">\n' +
+    '            <ul class="nav navbar-nav pull-left">\n' +
+    '                <li>\n' +
+    '                    <a class="btn" id="make-small-nav">\n' +
+    '                        <i class="fa fa-bars"></i>\n' +
+    '                    </a>\n' +
+    '                </li>\n' +
+    '                <li class="dropdown hidden-xs">\n' +
+    '                    <a class="btn dropdown-toggle" data-toggle="dropdown">\n' +
+    '                        <i class="fa fa-bell"></i>\n' +
+    '                        <span class="count">8</span>\n' +
+    '                    </a>\n' +
+    '                    <ul class="dropdown-menu notifications-list">\n' +
+    '                        <li class="pointer">\n' +
+    '                            <div class="pointer-inner">\n' +
+    '                                <div class="arrow"></div>\n' +
     '                            </div>\n' +
+    '                        </li>\n' +
+    '                        <li class="item-header">You have 6 new notifications</li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-comment"></i>\n' +
+    '                                <span class="content">New comment on ‘Awesome P...</span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-plus"></i>\n' +
+    '                                <span class="content">New user registration</span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-envelope"></i>\n' +
+    '                                <span class="content">New Message from George</span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-shopping-cart"></i>\n' +
+    '                                <span class="content">New purchase</span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-eye"></i>\n' +
+    '                                <span class="content">New order</span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item-footer">\n' +
+    '                            <a href="#">\n' +
+    '                                View all notifications\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                    </ul>\n' +
+    '                </li>\n' +
+    '                <li class="dropdown hidden-xs">\n' +
+    '                    <a class="btn dropdown-toggle" data-toggle="dropdown">\n' +
+    '                        <i class="fa fa-envelope-o"></i>\n' +
+    '                        <span class="count">16</span>\n' +
+    '                    </a>\n' +
+    '                    <ul class="dropdown-menu notifications-list messages-list">\n' +
+    '                        <li class="pointer">\n' +
+    '                            <div class="pointer-inner">\n' +
+    '                                <div class="arrow"></div>\n' +
+    '                            </div>\n' +
+    '                        </li>\n' +
+    '                        <li class="item first-item">\n' +
+    '                            <a href="#">\n' +
+    '                                <img src="assets/images/samples/messages-photo-1.png" alt=""/>\n' +
+    '                                <span class="content">\n' +
+    '                                    <span class="content-headline">\n' +
+    '                                        George Clooney\n' +
+    '                                    </span>\n' +
+    '                                    <span class="content-text">\n' +
+    '                                        Look, just because I don\'t be givin\' no man a foot massage don\'t make it \n' +
+    '                                        right for Marsellus to throw...\n' +
+    '                                    </span>\n' +
+    '                                </span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <img src="assets/images/samples/messages-photo-2.png" alt=""/>\n' +
+    '                                <span class="content">\n' +
+    '                                    <span class="content-headline">\n' +
+    '                                        Emma Watson\n' +
+    '                                    </span>\n' +
+    '                                    <span class="content-text">\n' +
+    '                                        Look, just because I don\'t be givin\' no man a foot massage don\'t make it \n' +
+    '                                        right for Marsellus to throw...\n' +
+    '                                    </span>\n' +
+    '                                </span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <img src="assets/images/samples/messages-photo-3.png" alt=""/>\n' +
+    '                                <span class="content">\n' +
+    '                                    <span class="content-headline">\n' +
+    '                                        Robert Downey Jr.\n' +
+    '                                    </span>\n' +
+    '                                    <span class="content-text">\n' +
+    '                                        Look, just because I don\'t be givin\' no man a foot massage don\'t make it \n' +
+    '                                        right for Marsellus to throw...\n' +
+    '                                    </span>\n' +
+    '                                </span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item-footer">\n' +
+    '                            <a href="#">\n' +
+    '                                View all messages\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                    </ul>\n' +
+    '                </li>\n' +
+    '<!--                         <li class="dropdown hidden-xs">\n' +
+    '                    <a class="btn dropdown-toggle" data-toggle="dropdown">\n' +
+    '                        New Item\n' +
+    '                        <i class="fa fa-caret-down"></i>\n' +
+    '                    </a>\n' +
+    '                    <ul class="dropdown-menu">\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-archive"></i> \n' +
+    '                                New Product\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-shopping-cart"></i> \n' +
+    '                                New Order\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-sitemap"></i> \n' +
+    '                                New Category\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-file-text"></i> \n' +
+    '                                New Page\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                    </ul>\n' +
+    '                </li> -->\n' +
+    '            </ul>\n' +
+    '        </div>\n' +
+    '        \n' +
+    '        <div class="nav-no-collapse pull-right" id="header-nav">\n' +
+    '            <ul class="nav navbar-nav pull-right">\n' +
+    '                <li class="mobile-search">\n' +
+    '                    <a class="btn">\n' +
+    '                        <i class="fa fa-search"></i>\n' +
+    '                    </a>\n' +
     '                    \n' +
-    '                </a>\n' +
-    '\n' +
-    '                <ul class="dropdown-menu">\n' +
-    '                    <!-- <li><a href="javascript:void(0)">Action</a></li> -->\n' +
-    '                    <li class="divider"></li>\n' +
-    '                    <li><a href="javascript:void(0)" ng-click="logout()" translate>Logout</a></li>\n' +
-    '                </ul>\n' +
-    '            </li>\n' +
-    '\n' +
-    '        </ul>\n' +
+    '                    <div class="drowdown-search">\n' +
+    '                        <form role="search">\n' +
+    '                            <div class="form-group">\n' +
+    '                                <input type="text" class="form-control" placeholder="{{::(\'Search\' | translate)}}">\n' +
+    '                                <i class="fa fa-search nav-search-icon"></i>\n' +
+    '                            </div>\n' +
+    '                        </form>\n' +
+    '                    </div>\n' +
+    '                    \n' +
+    '                </li>\n' +
+    '                <li class="dropdown profile-dropdown">\n' +
+    '                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">\n' +
+    '                        <img src="http://lorempixel.com/56/56/people/3" alt=""/>\n' +
+    '                        <span class="hidden-xs">truthatenvy</span> <b class="caret"></b>\n' +
+    '                    </a>\n' +
+    '                    <ul class="dropdown-menu">\n' +
+    '                        <li><a href="user-profile.html"><i class="fa fa-user"></i>Profile</a></li>\n' +
+    '                        <li><a href="#"><i class="fa fa-cog"></i>Settings</a></li>\n' +
+    '                        <li><a href="#"><i class="fa fa-envelope-o"></i>Messages</a></li>\n' +
+    '                        <li><a href="#"><i class="fa fa-power-off"></i>Logout</a></li>\n' +
+    '                    </ul>\n' +
+    '                </li>\n' +
+    '                <li class="hidden-xxs">\n' +
+    '                    <a class="btn">\n' +
+    '                        <i class="fa fa-power-off"></i>\n' +
+    '                    </a>\n' +
+    '                </li>\n' +
+    '            </ul>\n' +
+    '        </div>\n' +
+    '        </div>\n' +
     '    </div>\n' +
-    '</div>\n' +
-    '<div class="progress" style="margin-top: -20px;height: 5px;" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="XP: 160/200" jq-tooltip>\n' +
-    '    <div class="progress-bar progress-bar-success" style="width: 80%" ></div>\n' +
-    '</div><!-- bars/views/header_layout.html END -->');
+    '</header>        <header class="navbar" id="header-navbar">\n' +
+    '    <div class="container">\n' +
+    '        <a href="javascript:;" id="logo" class="navbar-brand" ui-sref="home">\n' +
+    '            <h4>Siala 2.0</h4>\n' +
+    '        </a>\n' +
+    '        \n' +
+    '        <div class="clearfix">\n' +
+    '        <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">\n' +
+    '            <span class="sr-only">Toggle navigation</span>\n' +
+    '            <span class="fa fa-bars"></span>\n' +
+    '        </button>\n' +
+    '        \n' +
+    '        <div class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs">\n' +
+    '            <ul class="nav navbar-nav pull-left">\n' +
+    '                <li>\n' +
+    '                    <a class="btn" id="make-small-nav" ng-click="toggleNav()">\n' +
+    '                        <i class="fa fa-bars"></i>\n' +
+    '                    </a>\n' +
+    '                </li>\n' +
+    '                <li class="dropdown hidden-xs">\n' +
+    '                    <a class="btn dropdown-toggle" data-toggle="dropdown">\n' +
+    '                        <i class="fa fa-bell"></i>\n' +
+    '                        <span class="count">8</span>\n' +
+    '                    </a>\n' +
+    '                    <ul class="dropdown-menu notifications-list">\n' +
+    '                        <li class="pointer">\n' +
+    '                            <div class="pointer-inner">\n' +
+    '                                <div class="arrow"></div>\n' +
+    '                            </div>\n' +
+    '                        </li>\n' +
+    '                        <li class="item-header">You have 6 new notifications</li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-comment"></i>\n' +
+    '                                <span class="content">New comment on ‘Awesome P...</span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-plus"></i>\n' +
+    '                                <span class="content">New user registration</span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-envelope"></i>\n' +
+    '                                <span class="content">New Message from George</span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-shopping-cart"></i>\n' +
+    '                                <span class="content">New purchase</span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-eye"></i>\n' +
+    '                                <span class="content">New order</span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item-footer">\n' +
+    '                            <a href="#">\n' +
+    '                                View all notifications\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                    </ul>\n' +
+    '                </li>\n' +
+    '                <li class="dropdown hidden-xs">\n' +
+    '                    <a class="btn dropdown-toggle" data-toggle="dropdown">\n' +
+    '                        <i class="fa fa-envelope-o"></i>\n' +
+    '                        <span class="count">16</span>\n' +
+    '                    </a>\n' +
+    '                    <ul class="dropdown-menu notifications-list messages-list">\n' +
+    '                        <li class="pointer">\n' +
+    '                            <div class="pointer-inner">\n' +
+    '                                <div class="arrow"></div>\n' +
+    '                            </div>\n' +
+    '                        </li>\n' +
+    '                        <li class="item first-item">\n' +
+    '                            <a href="#">\n' +
+    '                                <img src="assets/images/samples/messages-photo-1.png" alt=""/>\n' +
+    '                                <span class="content">\n' +
+    '                                    <span class="content-headline">\n' +
+    '                                        George Clooney\n' +
+    '                                    </span>\n' +
+    '                                    <span class="content-text">\n' +
+    '                                        Look, just because I don\'t be givin\' no man a foot massage don\'t make it \n' +
+    '                                        right for Marsellus to throw...\n' +
+    '                                    </span>\n' +
+    '                                </span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <img src="assets/images/samples/messages-photo-2.png" alt=""/>\n' +
+    '                                <span class="content">\n' +
+    '                                    <span class="content-headline">\n' +
+    '                                        Emma Watson\n' +
+    '                                    </span>\n' +
+    '                                    <span class="content-text">\n' +
+    '                                        Look, just because I don\'t be givin\' no man a foot massage don\'t make it \n' +
+    '                                        right for Marsellus to throw...\n' +
+    '                                    </span>\n' +
+    '                                </span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <img src="assets/images/samples/messages-photo-3.png" alt=""/>\n' +
+    '                                <span class="content">\n' +
+    '                                    <span class="content-headline">\n' +
+    '                                        Robert Downey Jr.\n' +
+    '                                    </span>\n' +
+    '                                    <span class="content-text">\n' +
+    '                                        Look, just because I don\'t be givin\' no man a foot massage don\'t make it \n' +
+    '                                        right for Marsellus to throw...\n' +
+    '                                    </span>\n' +
+    '                                </span>\n' +
+    '                                <span class="time"><i class="fa fa-clock-o"></i>13 min.</span>\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item-footer">\n' +
+    '                            <a href="#">\n' +
+    '                                View all messages\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                    </ul>\n' +
+    '                </li>\n' +
+    '<!--                         <li class="dropdown hidden-xs">\n' +
+    '                    <a class="btn dropdown-toggle" data-toggle="dropdown">\n' +
+    '                        New Item\n' +
+    '                        <i class="fa fa-caret-down"></i>\n' +
+    '                    </a>\n' +
+    '                    <ul class="dropdown-menu">\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-archive"></i> \n' +
+    '                                New Product\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-shopping-cart"></i> \n' +
+    '                                New Order\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-sitemap"></i> \n' +
+    '                                New Category\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                        <li class="item">\n' +
+    '                            <a href="#">\n' +
+    '                                <i class="fa fa-file-text"></i> \n' +
+    '                                New Page\n' +
+    '                            </a>\n' +
+    '                        </li>\n' +
+    '                    </ul>\n' +
+    '                </li> -->\n' +
+    '            </ul>\n' +
+    '        </div>\n' +
+    '        \n' +
+    '        <div class="nav-no-collapse pull-right" id="header-nav">\n' +
+    '            <ul class="nav navbar-nav pull-right">\n' +
+    '                <li class="mobile-search" ng-click="showSearch(e)">\n' +
+    '                    <a class="btn">\n' +
+    '                        <i class="fa fa-search"></i>\n' +
+    '                    </a>\n' +
+    '                    \n' +
+    '                    <div class="drowdown-search">\n' +
+    '                        <form role="search">\n' +
+    '                            <div class="form-group">\n' +
+    '                                <input type="text" class="form-control" placeholder="{{::(\'Search\' | translate)}}">\n' +
+    '                                <i class="fa fa-search nav-search-icon"></i>\n' +
+    '                            </div>\n' +
+    '                        </form>\n' +
+    '                    </div>\n' +
+    '                    \n' +
+    '                </li>\n' +
+    '                <li class="dropdown profile-dropdown">\n' +
+    '                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">\n' +
+    '                        <img src="http://lorempixel.com/56/56/people/3" alt=""/>\n' +
+    '                        <span class="hidden-xs">truthatenvy</span> <b class="caret"></b>\n' +
+    '                    </a>\n' +
+    '                    <ul class="dropdown-menu">\n' +
+    '                        <li><a href="user-profile.html"><i class="fa fa-user"></i>Profile</a></li>\n' +
+    '                        <li><a href="#"><i class="fa fa-cog"></i>Settings</a></li>\n' +
+    '                        <li><a href="#"><i class="fa fa-envelope-o"></i>Messages</a></li>\n' +
+    '                        <li><a href="#"><i class="fa fa-power-off"></i>Logout</a></li>\n' +
+    '                    </ul>\n' +
+    '                </li>\n' +
+    '                <li class="hidden-xxs">\n' +
+    '                    <a class="btn">\n' +
+    '                        <i class="fa fa-power-off"></i>\n' +
+    '                    </a>\n' +
+    '                </li>\n' +
+    '            </ul>\n' +
+    '        </div>\n' +
+    '        </div>\n' +
+    '    </div>\n' +
+    '</header><!-- bars/views/header_layout.html END -->');
 }]);
 })();
 
@@ -483,7 +842,109 @@ module.run(['$templateCache', function($templateCache) {
     '\n' +
     '<!-- <side-menu-widget isauth="isauth"></side-menu-widget> -->\n' +
     '\n' +
-    ' <side-forum-list isauth="isauth"></side-forum-list> \n' +
+    '<!-- <side-forum-list isauth="isauth"></side-forum-list>  -->\n' +
+    '\n' +
+    '<div id="nav-col">\n' +
+    '    <section id="col-left" class="col-left-nano">\n' +
+    '        <div id="col-left-inner" class="col-left-nano-content">\n' +
+    '            <div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav"> \n' +
+    '                <ul class="nav nav-pills nav-stacked">\n' +
+    '                    <li class="nav-header nav-header-first hidden-sm hidden-xs" translate>\n' +
+    '                        Navigation\n' +
+    '                    </li>\n' +
+    '                    <li>\n' +
+    '                        <a href="javascript:;" ui-sref="home">\n' +
+    '                            <i class="glyphicon glyphicon-bullhorn" style="margin-top: 14px;"></i>\n' +
+    '                            <span translate>What\'s new</span>\n' +
+    '                            <span class="label label-primary label-circle pull-right">28</span>\n' +
+    '                        </a>\n' +
+    '                    </li>\n' +
+    '                    <li>\n' +
+    '                        <a href="javascript:;" ui-sref="home">\n' +
+    '                            <i class="fa fa-envelope"></i>\n' +
+    '                            <span translate>Messages</span>\n' +
+    '                            \n' +
+    '                        </a>\n' +
+    '                    </li>\n' +
+    '                    <li>\n' +
+    '                        <a href="javascript:;" ui-sref="home">\n' +
+    '                            <i class="fa fa-star"></i>\n' +
+    '                            <span translate>Bookmarks</span>\n' +
+    '                            <span class="label label-success label-circle pull-right" style="width:18px;">4</span>\n' +
+    '                            \n' +
+    '                        </a>\n' +
+    '                    </li>\n' +
+    '                   \n' +
+    '\n' +
+    '                    <li class="nav-header hidden-sm hidden-xs" translate>\n' +
+    '                        Forums\n' +
+    '                    </li>\n' +
+    '                    <li>\n' +
+    '                        <a href="javascript:;" class="dropdown-toggle" dropdown-toggle>\n' +
+    '                            <i class="fa fa-institution"></i>\n' +
+    '                            <span translate>Knowledge base</span>\n' +
+    '                            <i class="fa fa-angle-right drop-icon"></i>\n' +
+    '                        </a>\n' +
+    '                        <ul class="submenu">\n' +
+    '                            <li>\n' +
+    '                                <a href="javascript:;" class="ar-pd-lft" us-sref="home">\n' +
+    '                                    \n' +
+    '                                    <i class="fa fa-coffee" style="color:red;"></i>\n' +
+    '                                    <span data-toggle="tooltip" data-original-title="Фиксы, правки, изменения в балансе и прочие нюансы, важные для комфортной игры.">Особенности Сиалы</span>\n' +
+    '                                    <!-- <span class="label label-danger label-circle pull-right" style="width:18px;margin-top:10px;margin-right:4px;">\n' +
+    '                                        <i class="fa fa-microphone"></i> -->\n' +
+    '                                    </span>\n' +
+    '                                </a>\n' +
+    '                            </li>\n' +
+    '                            <li>\n' +
+    '                                <a href="javascript:;" class="ar-pd-lft" us-sref="home">\n' +
+    '                                    \n' +
+    '                                    <i class="fa fa-coffee"></i>\n' +
+    '                                    <span data-toggle="tooltip" data-original-title="Архив новостей от летописца Гаулдура">Архив Гаулдура</span>\n' +
+    '                                    \n' +
+    '                                </a>\n' +
+    '                            </li>\n' +
+    '                        </ul>\n' +
+    '                    </li>\n' +
+    '                    <li>\n' +
+    '                        <a href="#" class="dropdown-toggle" dropdown-toggle>\n' +
+    '                            <i class="fa fa-group"></i>\n' +
+    '                            <span>Гильдии</span>\n' +
+    '                            <i class="fa fa-angle-right drop-icon"></i>\n' +
+    '                        </a>\n' +
+    '                        <ul class="submenu">\n' +
+    '                           \n' +
+    '                            <li>\n' +
+    '                                \n' +
+    '                                <a href="javascript:;" class="ar-pd-lft" us-sref="home">\n' +
+    '                                    \n' +
+    '                                    <i class="fa fa-coffee"></i>\n' +
+    '                                    <span data-toggle="tooltip" data-original-title="Организация, охраняющая безопасность Валиостра">Королевские песочники</span>\n' +
+    '                                    \n' +
+    '                                </a>\n' +
+    '\n' +
+    '                            </li>\n' +
+    '                            <li>\n' +
+    '                                \n' +
+    '                                <a href="javascript:;" class="ar-pd-lft" us-sref="home">\n' +
+    '                                    \n' +
+    '                                    <i class="fa fa-coffee"></i>\n' +
+    '                                    <span data-toggle="tooltip" data-original-title="Основная ударная сила Неназываемого, следящая за порядком в Рачьем Герцогстве">Черная Инквизиция</span>\n' +
+    '                                    \n' +
+    '                                </a>\n' +
+    '\n' +
+    '                            </li>\n' +
+    '                           \n' +
+    '                           \n' +
+    '                        </ul>\n' +
+    '                    </li>\n' +
+    '\n' +
+    '                </ul>\n' +
+    '            </div>\n' +
+    '        </div>\n' +
+    '    </section>\n' +
+    '    <div id="nav-col-submenu"></div>\n' +
+    '</div>\n' +
     '\n' +
     '\n' +
     '<!-- bars/views/side_layout.html END -->');

@@ -7,7 +7,7 @@ define(['angular', '../module' ], function (angular) {
         	var self = this;
 
         	this.isAuthenticatedUser = User.isAuthenticated();
-        	// var p = Forum.find();
+        	var p = Forum.find();
 
         	// console.log(p);
 

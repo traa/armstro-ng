@@ -7,5 +7,6 @@ define([
     "ngSanitize",
     "ngCookies",
     "localStorage",
-    "ngAnimate"
+    "ngAnimate",
+    "angularLoadingBar"
 ], function() { });

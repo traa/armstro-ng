@@ -28,6 +28,7 @@ require.config({
         angular: '../bower_components/angular/angular.min',
         uiRouter: '../bower_components/angular-ui-router/release/angular-ui-router.min',
         ngAnimate: '../bower_components/angular-animate/angular-animate.min',
+        angularLoadingBar: './lib/angular-loading-bar',
 
         jquery: '../bower_components/jquery/dist/jquery.min',
         jqDropdown: './lib/jquery.dropdown',
@@ -38,6 +39,12 @@ require.config({
         ngGetText: './lib/angular-gettext.min',
         ngCookies: './lib/angular-cookies.min',
         localStorage: './lib/angular-local-storage.min',
+
+
+        scripts: './lib/scripts',
+        pace: './lib/pace.min',
+        gridalicious: './lib/jquery.grid-a-licious.min',
+        nanoscroller: './lib/jquery.nanoscroller.min',
 
         ngSanitize: './lib/angular-sanitize',
 
@@ -51,8 +58,24 @@ require.config({
             exports: 'angular'
         },
 
+        angularLoadingBar: {
+            deps: ['angular']
+        },
+
+        gridalicious: {
+            deps: ['jquery']
+        },
+
+        nanoscroller: {
+            deps: ['jquery']
+        },
+
         ngAnimate: {
             deps: ['angular']
+        },
+
+        scripts: {
+            deps: ['jquery', 'nanoscroller', 'gridalicious']
         },
 
         bootstrap: {
@@ -100,7 +123,7 @@ require(['bundles/nglib'],
 
                     angular.element().ready(function () {
 
-                        $.material.init();
+                      
 
                         angular.bootstrap(document, ['app']);
                     });

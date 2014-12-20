@@ -8,6 +8,7 @@ define(['angular'], function (angular) {
 
     return angular.module('app', [
         'ngAnimate',
+        'angular-loading-bar',
         'common',
         'gettext',
         'app.config',

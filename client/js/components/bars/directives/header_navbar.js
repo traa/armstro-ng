@@ -15,6 +15,19 @@ define(['angular', '../module'], function (angular) {
                     $scope.logout = function () {
                         User.logout();
                     };
+
+                    $scope.showSearch = function (e) {
+                            
+                            $('.mobile-search').addClass('active');
+                            $('.mobile-search form input.form-control').focus(); 
+
+                    };
+
+                    $scope.toggleNav = function () {
+
+                        $('#page-wrapper').toggleClass('nav-small');
+
+                    };
                 
                 },
                 templateUrl: 'bars/views/header_layout.html'

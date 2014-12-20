@@ -6,5 +6,6 @@ define([
     "ngGetText",
     "ngSanitize",
     "ngCookies",
-    "localStorage"
+    "localStorage",
+    "ngAnimate"
 ], function() { });

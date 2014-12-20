@@ -27,6 +27,7 @@ require.config({
     paths: {
         angular: '../bower_components/angular/angular.min',
         uiRouter: '../bower_components/angular-ui-router/release/angular-ui-router.min',
+        ngAnimate: '../bower_components/angular-animate/angular-animate.min',
 
         jquery: '../bower_components/jquery/dist/jquery.min',
         jqDropdown: './lib/jquery.dropdown',
@@ -48,6 +49,10 @@ require.config({
         angular : {
             deps: ['jquery'],
             exports: 'angular'
+        },
+
+        ngAnimate: {
+            deps: ['angular']
         },
 
         bootstrap: {

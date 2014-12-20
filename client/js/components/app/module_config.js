@@ -62,6 +62,7 @@
               $stateProvider
                   .state("home", {
                     url: "/",
+                    controller: 'HomeCtrl',
                     templateUrl: 'app/partials/home.html'
                   })
                   .state("login", {

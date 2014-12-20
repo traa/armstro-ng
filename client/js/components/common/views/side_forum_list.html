@@ -1,5 +1,6 @@
-﻿<div ng-switch="isauth">
-    <div ng-switch-when="true">
+﻿<div ng-switch="mode" class="ar-anim-vert-container " >
+    <!-- LIST OF FORUMS -->
+    <div ng-switch-when="normal" class="ar-vertical-collapse">
         
         <div class="well">
             <div class="list-group">
@@ -52,12 +53,55 @@
     </div>
 
     </div>
-    <div ng-switch-default>
+
+    <!-- VERTICALLY COLLAPSED -->
+    <div ng-switch-default class="ar-vertical-collapse">
 
 
-        <!-- show nothing for now? -->
+        <div class="well" class="">
+            <div class="list-group">
 
-   
+                <div class="list-group-item ar-no-padding-lr">
+                    <div class="row-action-primary ar-pd-r-10">
+                        <i class="mdi-action-assignment-late ar-wh-rd-2"></i>
+                    </div>
+                    <div class="row-content">
+                        
+                    </div>
+                    <i class="mdi-av-play-arrow ar-ar-pos"></i>
+                </div>
+
+
+                <div class="list-group-separator"></div>
+
+                <div class="list-group-item ar-no-padding-lr">
+                    <div class="row-action-primary ar-pd-r-10">
+                        <i class="mdi-action-extension ar-wh-rd"></i>
+                    </div>
+                    <div class="row-content">
+                        
+                    </div>
+                    <i class="mdi-av-play-arrow ar-ar-pos"></i>
+                </div>
+
+
+                <div class="list-group-separator"></div>
+
+
+                <div class="list-group-item ar-no-padding-lr">
+                    <div class="row-action-primary ar-pd-r-10">
+                        <i class="mdi-action-extension ar-wh-rd"></i>
+                    </div>
+                    <div class="row-content">
+                     
+
+                    </div>
+                    <i class="mdi-av-play-arrow ar-ar-pos"></i>
+                </div>
+
+                <div class="list-group-separator"></div>
+        </div>
+    </div>
    
     </div>
 </div>

@@ -7,6 +7,7 @@ define(['angular'], function (angular) {
     angular.module('app.directives', []);
 
     return angular.module('app', [
+        'ngAnimate',
         'common',
         'gettext',
         'app.config',

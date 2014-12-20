@@ -64,7 +64,7 @@ try {
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('app/partials/home.html',
     '<!-- app/partials/home.html START --><div class="panel panel-default ar-mr-rd">\n' +
-    '    <div class="panel-body ar-pd-rd">\n' +
+    '    <div class="panel-body ar-pd-rd" ng-click="selectThread()">\n' +
     '\n' +
     '	    <div class="col-md-1">\n' +
     '	    	<i class="mdi-communication-comment ar-spec-blue"></i>\n' +
@@ -498,8 +498,9 @@ try {
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('common/views/side_forum_list.html',
-    '<!-- common/views/side_forum_list.html START --><div ng-switch="isauth">\n' +
-    '    <div ng-switch-when="true">\n' +
+    '<!-- common/views/side_forum_list.html START --><div ng-switch="mode" class="ar-anim-vert-container " >\n' +
+    '    <!-- LIST OF FORUMS -->\n' +
+    '    <div ng-switch-when="normal" class="ar-vertical-collapse">\n' +
     '        \n' +
     '        <div class="well">\n' +
     '            <div class="list-group">\n' +
@@ -552,12 +553,55 @@ module.run(['$templateCache', function($templateCache) {
     '    </div>\n' +
     '\n' +
     '    </div>\n' +
-    '    <div ng-switch-default>\n' +
+    '\n' +
+    '    <!-- VERTICALLY COLLAPSED -->\n' +
+    '    <div ng-switch-default class="ar-vertical-collapse">\n' +
     '\n' +
     '\n' +
-    '        <!-- show nothing for now? -->\n' +
+    '        <div class="well" class="">\n' +
+    '            <div class="list-group">\n' +
     '\n' +
-    '   \n' +
+    '                <div class="list-group-item ar-no-padding-lr">\n' +
+    '                    <div class="row-action-primary ar-pd-r-10">\n' +
+    '                        <i class="mdi-action-assignment-late ar-wh-rd-2"></i>\n' +
+    '                    </div>\n' +
+    '                    <div class="row-content">\n' +
+    '                        \n' +
+    '                    </div>\n' +
+    '                    <i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
+    '                </div>\n' +
+    '\n' +
+    '\n' +
+    '                <div class="list-group-separator"></div>\n' +
+    '\n' +
+    '                <div class="list-group-item ar-no-padding-lr">\n' +
+    '                    <div class="row-action-primary ar-pd-r-10">\n' +
+    '                        <i class="mdi-action-extension ar-wh-rd"></i>\n' +
+    '                    </div>\n' +
+    '                    <div class="row-content">\n' +
+    '                        \n' +
+    '                    </div>\n' +
+    '                    <i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
+    '                </div>\n' +
+    '\n' +
+    '\n' +
+    '                <div class="list-group-separator"></div>\n' +
+    '\n' +
+    '\n' +
+    '                <div class="list-group-item ar-no-padding-lr">\n' +
+    '                    <div class="row-action-primary ar-pd-r-10">\n' +
+    '                        <i class="mdi-action-extension ar-wh-rd"></i>\n' +
+    '                    </div>\n' +
+    '                    <div class="row-content">\n' +
+    '                     \n' +
+    '\n' +
+    '                    </div>\n' +
+    '                    <i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
+    '                </div>\n' +
+    '\n' +
+    '                <div class="list-group-separator"></div>\n' +
+    '        </div>\n' +
+    '    </div>\n' +
     '   \n' +
     '    </div>\n' +
     '</div>\n' +

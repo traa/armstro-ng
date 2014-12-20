@@ -9,6 +9,10 @@ define(['angular'], function (angular) {
      */
     angular.module('common.filters', []);
 
+    /**
+     * @namespace common.animations
+     */
+    angular.module('common.animations', []);
 
     /**
      * @namespace common.services
@@ -35,6 +39,7 @@ define(['angular'], function (angular) {
         'common.directives',
         'common.services',
         'common.filters',
-        'common.factories'
+        'common.factories',
+        'common.animations'
     ]);
 });

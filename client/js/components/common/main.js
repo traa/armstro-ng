@@ -10,7 +10,10 @@ define([
     "./filters/common_filters",
 
     "./factories/safe_apply",
-    "./factories/lb_services"
+    "./factories/lb_services",
+
+    "./services/ui_sync",
+    "./animations/vertical_collapse"
 ], function () {
     'use strict';
     return {};

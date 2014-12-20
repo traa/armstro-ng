@@ -585,9 +585,6 @@ module.run(['$templateCache', function($templateCache) {
     '                </div>\n' +
     '\n' +
     '\n' +
-    '                <div class="list-group-separator"></div>\n' +
-    '\n' +
-    '\n' +
     '                <div class="list-group-item ar-no-padding-lr">\n' +
     '                    <div class="row-action-primary ar-pd-r-10">\n' +
     '                        <i class="mdi-action-extension ar-wh-rd"></i>\n' +
@@ -599,7 +596,6 @@ module.run(['$templateCache', function($templateCache) {
     '                    <i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
     '                </div>\n' +
     '\n' +
-    '                <div class="list-group-separator"></div>\n' +
     '        </div>\n' +
     '    </div>\n' +
     '   \n' +

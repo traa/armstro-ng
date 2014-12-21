@@ -6,7 +6,7 @@ define(['angular', '../module' ], function (angular) {
 
         	var self = this;
 
-        	this.isAuthenticatedUser = User.isAuthenticated();
+        	this.isauth = User.isAuthenticated();
         	var p = Forum.find();
 
         	// console.log(p);
@@ -23,10 +23,10 @@ define(['angular', '../module' ], function (angular) {
                 return User.isAuthenticated();
 
             }, function (newVal, oldVal) {
-
+            	
                 //if authenticated
                 if (newVal !== oldVal) {
-                    self.isAuthenticatedUser = newVal;
+                    self.isauth = newVal;
                 }
 
             });

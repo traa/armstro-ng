@@ -1,73 +1,51 @@
 
-<form class="form-horizontal">
-    <fieldset>
 
-    <legend translate>Registration</legend>
+ <div class="col-lg-6" style="margin-left: 25%;">
+    <div class="main-box">
+        <header class="main-box-header clearfix">
+            <h2 translate>Registration</h2>
+        </header>
+        <div class="main-box-body clearfix">
+            <form role="form">
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label for="inputEmail" translate>Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="{{::emailPlaceholder}}" ng-model="user.email">
+                </div>
 
-   		<div class="form-group">
-            
-            <label for="inputEmail" class="col-lg-2 control-label" translate>Email</label>
+                <!-- PASSWORD -->
+                <div class="form-group">
+                    <label for="inputPassword" translate>Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="{{::passwordPlaceholder}}" ng-model="user.password">
+                </div>
 
-            <div class="col-lg-10">
-                <input type="email" class="form-control floating-label" ng-model="user.email" id="inputEmail" placeholder="{{::emailPlaceholder}}">
-            </div>
+                <!-- REPEAT PASSWORD -->
+                <div class="form-group">
+                    <label for="inputPasswordRepeat" translate>Password repeat</label>
+                    <input type="password" class="form-control" ng-model="user.passwordrepeat" id="inputPasswordRepeat" placeholder="{{::('Repeat to be sure' | translate)}}">
+                </div>
 
-        </div>
+                <label for="gameclass" class="col-lg-2 control-label" translate>Game class</label>
+                <div class="form-group" >
+                    
 
-        <div class="form-group">
-            <label for="inputPassword" class="col-lg-2 control-label" translate>Password</label>
-            <div class="col-lg-10">
-                <input type="password" class="form-control" ng-model="user.password" id="inputPassword" placeholder="{{::passwordPlaceholder}}">
-            </div>
-        </div>
+                    
+                    <nwn-class-choose-input gameclass="user.gameclass"></nwn-class-choose-input>
+                    
+                    
+                </div>
 
-        <div class="form-group">
-            <label for="inputPasswordRepeat" class="col-lg-2 control-label" translate>Password repeat</label>
-            <div class="col-lg-10">
-                <input type="password" ng-model="user.passwordrepeat" class="form-control" id="inputPasswordRepeat" placeholder="{{::('Repeat to be sure' | translate)}}">
-            </div>
-        </div>
-
-         <div class="form-group" >
-            <label for="gameclass" class="col-lg-2 control-label" translate>Game class</label>
-
-            <div class="col-lg-10">
-                <nwn-class-choose-input gameclass="user.gameclass"></nwn-class-choose-input>
-            </div>
-            
-        </div>
-
-
-        <div class="col-sm-offset-2 col-sm-10">
-            <div class="list-group">
                 
-                <div class="list-group-item">
-                    <div class="row-action-primary checkbox">
-                        <label>
-                            <input type="checkbox" ng-model="user.iagree">
-                            <span class="ripple"></span>
-                            <span class="check"></span>
-                        </label>
-                    </div>
-                    <div class="row-content">
-                        <h4 class="list-group-item-heading" translate>I agree with rules of the game</h4>
-                        <p class="list-group-item-text" translate>And will not hesitate
-                        </p>
+
+
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button class="btn btn-default" translate>Clear</button>
+                        <button type="submit" class="btn btn-primary btn-success" translate ng-click="reg(user)">Send</button>
                     </div>
                 </div>
-                <div class="list-group-separator"></div>
-            </div>
+
+            </form>
         </div>
-
-        <div class="form-group">
-            <div class="col-lg-10 col-lg-offset-2">
-                
-                <button class="btn btn-default" translate>Clear</button>
-                <button type="submit" class="btn btn-primary btn-success" ng-click="reg(user)" translate>Send</button>
-            </div>
-        </div>
-
-    </fieldset>
-
-</form>
-
+    </div>
+</div>

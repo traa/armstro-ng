@@ -6,51 +6,38 @@ try {
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('app/partials/forgot_password.html',
-    '<!-- app/partials/forgot_password.html START --><div ng-controller="ForgotPasswordCtrl">\n' +
+    '<!-- app/partials/forgot_password.html START --><div class="col-lg-6" style="margin-left: 25%;" ng-controller="ForgotPasswordCtrl">\n' +
+    '    <div class="main-box">\n' +
+    '        <header class="main-box-header clearfix">\n' +
+    '            <h2 translate>Forgot password</h2>\n' +
+    '        </header>\n' +
+    '        <div class="main-box-body clearfix">\n' +
     '\n' +
-    '<div ng-switch="msg.title">\n' +
-    '    <div ng-switch-when="false">\n' +
-    '		<form class="form-horizontal">\n' +
-    '		    <fieldset>\n' +
-    '\n' +
-    '		    <legend translate>Forgot password</legend>\n' +
-    '\n' +
-    '		   		<div class="form-group">\n' +
-    '		            \n' +
-    '		            <label for="inputEmail" class="col-lg-2 control-label" translate>Email</label>\n' +
-    '\n' +
-    '		            <div class="col-lg-10">\n' +
-    '		                <input type="email" class="form-control" id="inputEmail" placeholder="{{::emailPlaceholder}}" ng-model="user.email">\n' +
-    '		            </div>\n' +
-    '\n' +
-    '		        </div>\n' +
+    '        	<div ng-switch="msg.title">\n' +
+    '    			<div ng-switch-when="false">\n' +
+    '	            <form role="form">\n' +
     '\n' +
     '\n' +
-    '		        <div class="form-group">\n' +
-    '		            <div class="col-lg-10 col-lg-offset-2">\n' +
-    '		                <button type="submit" class="btn btn-primary btn-success" translate ng-click="resetPassword(user)">Submit</button>\n' +
-    '		            </div>\n' +
-    '		        </div>\n' +
+    '	            	<label for="inputEmail" translate>Email</label>\n' +
+    '	                <div class="input-group">\n' +
+    '	                	\n' +
+    '						<input type="email" class="form-control" id="inputEmail" placeholder="{{::emailPlaceholder}}" ng-model="user.email">\n' +
+    '						<span class="input-group-btn">\n' +
+    '							<button type="submit" class="btn btn-primary btn-success" translate ng-click="resetPassword(user)">Submit</button>\n' +
+    '						</span>\n' +
+    '					</div>\n' +
     '\n' +
-    '\n' +
-    '		    </fieldset>\n' +
-    '\n' +
-    '		</form>	\n' +
-    '	</div>\n' +
-    '\n' +
-    '	<div ng-switch-default>\n' +
+    '	            </form>\n' +
+    '	        </div>\n' +
+    '	        <div ng-switch-default>\n' +
     '		\n' +
-    '		<h2>{{msg.title}}</h2>\n' +
-    '    	<p>{{msg.text}}</p>\n' +
+    '				<h2>{{msg.title}}</h2>\n' +
+    '		    	<p>{{msg.text}}</p>\n' +
     '\n' +
-    '	</div>\n' +
+    '			</div>\n' +
     '\n' +
-    '\n' +
-    '\n' +
-    '</div>\n' +
-    '\n' +
-    '\n' +
-    '	\n' +
+    '        </div>\n' +
+    '    </div>\n' +
     '</div><!-- app/partials/forgot_password.html END -->');
 }]);
 })();
@@ -66,7 +53,7 @@ module.run(['$templateCache', function($templateCache) {
     '<!-- app/partials/home.html START --><div class="col-lg-6 col-md-6 col-sm-6">\n' +
     '	<div class="main-box feed">\n' +
     '		<header class="main-box-header clearfix">\n' +
-    '			<h2 class="pull-left">База знаний</h2>\n' +
+    '			<h2 class="pull-left">Особенности Сиалы</h2>\n' +
     '		</header>\n' +
     '		<div class="main-box-body clearfix" style="padding-left:15px;">\n' +
     '			<ul>\n' +
@@ -249,55 +236,45 @@ try {
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('auth/views/login_form.html',
-    '<!-- auth/views/login_form.html START -->\n' +
-    '<form class="form-horizontal">\n' +
-    '    <fieldset>\n' +
-    '\n' +
-    '    <legend translate>Login</legend>\n' +
-    '\n' +
-    '   		<div class="form-group">\n' +
-    '            \n' +
-    '            <label for="inputEmail" class="col-lg-2 control-label" translate>Email</label>\n' +
-    '\n' +
-    '            <div class="col-lg-10">\n' +
-    '                <input type="email" class="form-control" id="inputEmail" placeholder="{{::emailPlaceholder}}" ng-model="user.email">\n' +
-    '            </div>\n' +
-    '\n' +
-    '        </div>\n' +
-    '\n' +
-    '        <div class="form-group">\n' +
-    '            <label for="inputPassword" class="col-lg-2 control-label" translate>Password</label>\n' +
-    '            <div class="col-lg-10">\n' +
-    '                <input type="password" class="form-control" id="inputPassword" placeholder="{{::passwordPlaceholder}}" ng-model="user.password">\n' +
-    '                <div class="checkbox">\n' +
-    '                    <label>\n' +
-    '                        <input type="checkbox" name="remember_me" ng-model="user.rememberme">\n' +
-    '                        <span class="ripple"></span>\n' +
-    '                        <span class="check"></span>\n' +
-    '                        {{::(\'Remember me\' | translate)}}\n' +
-    '                    </label>\n' +
+    '<!-- auth/views/login_form.html START --><div class="col-lg-6" style="margin-left: 25%;">\n' +
+    '    <div class="main-box">\n' +
+    '        <header class="main-box-header clearfix">\n' +
+    '            <h2 translate>Login</h2>\n' +
+    '        </header>\n' +
+    '        <div class="main-box-body clearfix">\n' +
+    '            <form role="form">\n' +
+    '                <div class="form-group">\n' +
+    '                    <label for="inputEmail" translate>Email</label>\n' +
+    '                    <input type="email" class="form-control" id="inputEmail" placeholder="{{::emailPlaceholder}}" ng-model="user.email">\n' +
     '                </div>\n' +
-    '            </div>\n' +
+    '                <div class="form-group">\n' +
+    '                    <label for="inputPassword" translate>Password</label>\n' +
+    '                    <input type="password" class="form-control" id="inputPassword" placeholder="{{::passwordPlaceholder}}" ng-model="user.password">\n' +
+    '                </div>\n' +
+    '\n' +
+    '                \n' +
+    '                <div class="form-group">\n' +
+    '                    \n' +
+    '                    <div class="checkbox-nice checkbox-inline">\n' +
+    '                    <input type="checkbox" name="remember_me" ng-model="user.rememberme" id="remember_me">\n' +
+    '                    <label for="remember_me">\n' +
+    '                    {{::(\'Remember me\' | translate)}}\n' +
+    '                    </label>\n' +
+    '                    </div>\n' +
+    '                </div>\n' +
+    '\n' +
+    '\n' +
+    '                <div class="form-group">\n' +
+    '                    <div class="col-lg-10 col-lg-offset-2">\n' +
+    '                        <a href="javascript:void(0)" class="btn btn-default btn-raised" translate ui-sref="forgot">Forgot password</a>\n' +
+    '                        <button type="submit" class="btn btn-primary btn-success" translate ng-click="login(user)">Enter</button>\n' +
+    '                    </div>\n' +
+    '                </div>\n' +
+    '\n' +
+    '            </form>\n' +
     '        </div>\n' +
-    '\n' +
-    '\n' +
-    '\n' +
-    '\n' +
-    '\n' +
-    '\n' +
-    '        <div class="form-group">\n' +
-    '            <div class="col-lg-10 col-lg-offset-2">\n' +
-    '                <a href="javascript:void(0)" class="btn btn-default btn-raised" translate ui-sref="forgot">Forgot password</a>\n' +
-    '                <button type="submit" class="btn btn-primary btn-success" translate ng-click="login(user)">Enter</button>\n' +
-    '            </div>\n' +
-    '        </div>\n' +
-    '\n' +
-    '\n' +
-    '    </fieldset>\n' +
-    '\n' +
-    '</form>\n' +
-    '\n' +
-    '<!-- auth/views/login_form.html END -->');
+    '    </div>\n' +
+    '</div><!-- auth/views/login_form.html END -->');
 }]);
 })();
 
@@ -310,79 +287,56 @@ try {
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('auth/views/registration_form.html',
     '<!-- auth/views/registration_form.html START -->\n' +
-    '<form class="form-horizontal">\n' +
-    '    <fieldset>\n' +
     '\n' +
-    '    <legend translate>Registration</legend>\n' +
+    ' <div class="col-lg-6" style="margin-left: 25%;">\n' +
+    '    <div class="main-box">\n' +
+    '        <header class="main-box-header clearfix">\n' +
+    '            <h2 translate>Registration</h2>\n' +
+    '        </header>\n' +
+    '        <div class="main-box-body clearfix">\n' +
+    '            <form role="form">\n' +
+    '                <!-- EMAIL -->\n' +
+    '                <div class="form-group">\n' +
+    '                    <label for="inputEmail" translate>Email</label>\n' +
+    '                    <input type="email" class="form-control" id="inputEmail" placeholder="{{::emailPlaceholder}}" ng-model="user.email">\n' +
+    '                </div>\n' +
     '\n' +
-    '   		<div class="form-group">\n' +
-    '            \n' +
-    '            <label for="inputEmail" class="col-lg-2 control-label" translate>Email</label>\n' +
+    '                <!-- PASSWORD -->\n' +
+    '                <div class="form-group">\n' +
+    '                    <label for="inputPassword" translate>Password</label>\n' +
+    '                    <input type="password" class="form-control" id="inputPassword" placeholder="{{::passwordPlaceholder}}" ng-model="user.password">\n' +
+    '                </div>\n' +
     '\n' +
-    '            <div class="col-lg-10">\n' +
-    '                <input type="email" class="form-control floating-label" ng-model="user.email" id="inputEmail" placeholder="{{::emailPlaceholder}}">\n' +
-    '            </div>\n' +
+    '                <!-- REPEAT PASSWORD -->\n' +
+    '                <div class="form-group">\n' +
+    '                    <label for="inputPasswordRepeat" translate>Password repeat</label>\n' +
+    '                    <input type="password" class="form-control" ng-model="user.passwordrepeat" id="inputPasswordRepeat" placeholder="{{::(\'Repeat to be sure\' | translate)}}">\n' +
+    '                </div>\n' +
     '\n' +
-    '        </div>\n' +
+    '                <label for="gameclass" class="col-lg-2 control-label" translate>Game class</label>\n' +
+    '                <div class="form-group" >\n' +
+    '                    \n' +
     '\n' +
-    '        <div class="form-group">\n' +
-    '            <label for="inputPassword" class="col-lg-2 control-label" translate>Password</label>\n' +
-    '            <div class="col-lg-10">\n' +
-    '                <input type="password" class="form-control" ng-model="user.password" id="inputPassword" placeholder="{{::passwordPlaceholder}}">\n' +
-    '            </div>\n' +
-    '        </div>\n' +
+    '                    \n' +
+    '                    <nwn-class-choose-input gameclass="user.gameclass"></nwn-class-choose-input>\n' +
+    '                    \n' +
+    '                    \n' +
+    '                </div>\n' +
     '\n' +
-    '        <div class="form-group">\n' +
-    '            <label for="inputPasswordRepeat" class="col-lg-2 control-label" translate>Password repeat</label>\n' +
-    '            <div class="col-lg-10">\n' +
-    '                <input type="password" ng-model="user.passwordrepeat" class="form-control" id="inputPasswordRepeat" placeholder="{{::(\'Repeat to be sure\' | translate)}}">\n' +
-    '            </div>\n' +
-    '        </div>\n' +
-    '\n' +
-    '         <div class="form-group" >\n' +
-    '            <label for="gameclass" class="col-lg-2 control-label" translate>Game class</label>\n' +
-    '\n' +
-    '            <div class="col-lg-10">\n' +
-    '                <nwn-class-choose-input gameclass="user.gameclass"></nwn-class-choose-input>\n' +
-    '            </div>\n' +
-    '            \n' +
-    '        </div>\n' +
-    '\n' +
-    '\n' +
-    '        <div class="col-sm-offset-2 col-sm-10">\n' +
-    '            <div class="list-group">\n' +
     '                \n' +
-    '                <div class="list-group-item">\n' +
-    '                    <div class="row-action-primary checkbox">\n' +
-    '                        <label>\n' +
-    '                            <input type="checkbox" ng-model="user.iagree">\n' +
-    '                            <span class="ripple"></span>\n' +
-    '                            <span class="check"></span>\n' +
-    '                        </label>\n' +
-    '                    </div>\n' +
-    '                    <div class="row-content">\n' +
-    '                        <h4 class="list-group-item-heading" translate>I agree with rules of the game</h4>\n' +
-    '                        <p class="list-group-item-text" translate>And will not hesitate\n' +
-    '                        </p>\n' +
+    '\n' +
+    '\n' +
+    '                <div class="form-group">\n' +
+    '                    <div class="col-lg-10 col-lg-offset-2">\n' +
+    '                        <button class="btn btn-default" translate>Clear</button>\n' +
+    '                        <button type="submit" class="btn btn-primary btn-success" translate ng-click="reg(user)">Send</button>\n' +
     '                    </div>\n' +
     '                </div>\n' +
-    '                <div class="list-group-separator"></div>\n' +
-    '            </div>\n' +
+    '\n' +
+    '            </form>\n' +
     '        </div>\n' +
-    '\n' +
-    '        <div class="form-group">\n' +
-    '            <div class="col-lg-10 col-lg-offset-2">\n' +
-    '                \n' +
-    '                <button class="btn btn-default" translate>Clear</button>\n' +
-    '                <button type="submit" class="btn btn-primary btn-success" ng-click="reg(user)" translate>Send</button>\n' +
-    '            </div>\n' +
-    '        </div>\n' +
-    '\n' +
-    '    </fieldset>\n' +
-    '\n' +
-    '</form>\n' +
-    '\n' +
-    '<!-- auth/views/registration_form.html END -->');
+    '    </div>\n' +
+    '</div><!-- auth/views/registration_form.html END -->');
 }]);
 })();
 
@@ -811,7 +765,7 @@ module.run(['$templateCache', function($templateCache) {
     '                    </div>\n' +
     '                    \n' +
     '                </li>\n' +
-    '                <li class="dropdown profile-dropdown">\n' +
+    '                <li class="dropdown profile-dropdown" ng-show="isauth">\n' +
     '                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">\n' +
     '                        <img src="http://lorempixel.com/56/56/people/3" alt=""/>\n' +
     '                        <span class="hidden-xs">truthatenvy</span> <b class="caret"></b>\n' +
@@ -823,8 +777,8 @@ module.run(['$templateCache', function($templateCache) {
     '                        <li><a href="#"><i class="fa fa-power-off"></i>Logout</a></li>\n' +
     '                    </ul>\n' +
     '                </li>\n' +
-    '                <li class="hidden-xxs">\n' +
-    '                    <a class="btn">\n' +
+    '                <li class="hidden-xxs" ng-show="isauth">\n' +
+    '                    <a class="btn" href="javascript:;" ng-click="logout()">\n' +
     '                        <i class="fa fa-power-off"></i>\n' +
     '                    </a>\n' +
     '                </li>\n' +
@@ -1169,7 +1123,7 @@ try {
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('nwn/views/class_choose_input.html',
-    '<!-- nwn/views/class_choose_input.html START --><select ng-model="gameclass" class="select form-control floating-label" placeholder="{{::(\'Choose your class\' | translate)}}" jq-dropdown id="gameclass_input">\n' +
+    '<!-- nwn/views/class_choose_input.html START --><select ng-model="gameclass" class="form-control" placeholder="{{::(\'Choose your class\' | translate)}}" id="gameclass_input">\n' +
     '                    <option value="arcanearcher">Arcane Archer</option>\n' +
     '                    <option value="assassin">Assassin</option>\n' +
     '                    <option value="barbarian">Barbarian</option>\n' +

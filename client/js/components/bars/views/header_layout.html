@@ -397,7 +397,7 @@
                     </div>
                     
                 </li>
-                <li class="dropdown profile-dropdown">
+                <li class="dropdown profile-dropdown" ng-show="isauth">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="http://lorempixel.com/56/56/people/3" alt=""/>
                         <span class="hidden-xs">truthatenvy</span> <b class="caret"></b>
@@ -409,8 +409,8 @@
                         <li><a href="#"><i class="fa fa-power-off"></i>Logout</a></li>
                     </ul>
                 </li>
-                <li class="hidden-xxs">
-                    <a class="btn">
+                <li class="hidden-xxs" ng-show="isauth">
+                    <a class="btn" href="javascript:;" ng-click="logout()">
                         <i class="fa fa-power-off"></i>
                     </a>
                 </li>

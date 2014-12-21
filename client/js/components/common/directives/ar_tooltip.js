@@ -8,11 +8,9 @@ define(['angular', '../module'], function (angular) {
             return {
                 restrict: 'AE',
                 link: function ($scope, $elem, $attrs) {
-
-                    console.log($attrs);
                            
                     $elem.tooltip({
-                                placement: $attrs.placement || 'top'
+                        placement: $attrs.placement || 'top'
                     });
 
                 }

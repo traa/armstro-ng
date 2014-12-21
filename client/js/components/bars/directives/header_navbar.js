@@ -13,7 +13,9 @@ define(['angular', '../module'], function (angular) {
                 link: function ($scope, $elem, $attrs) {
 
                     $scope.logout = function () {
+                       
                         User.logout();
+
                     };
 
                     $scope.showSearch = function (e) {

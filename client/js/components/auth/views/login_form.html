@@ -1,48 +1,39 @@
-﻿
-<form class="form-horizontal">
-    <fieldset>
-
-    <legend translate>Login</legend>
-
-   		<div class="form-group">
-            
-            <label for="inputEmail" class="col-lg-2 control-label" translate>Email</label>
-
-            <div class="col-lg-10">
-                <input type="email" class="form-control" id="inputEmail" placeholder="{{::emailPlaceholder}}" ng-model="user.email">
-            </div>
-
-        </div>
-
-        <div class="form-group">
-            <label for="inputPassword" class="col-lg-2 control-label" translate>Password</label>
-            <div class="col-lg-10">
-                <input type="password" class="form-control" id="inputPassword" placeholder="{{::passwordPlaceholder}}" ng-model="user.password">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="remember_me" ng-model="user.rememberme">
-                        <span class="ripple"></span>
-                        <span class="check"></span>
-                        {{::('Remember me' | translate)}}
-                    </label>
+﻿<div class="col-lg-6" style="margin-left: 25%;">
+    <div class="main-box">
+        <header class="main-box-header clearfix">
+            <h2 translate>Login</h2>
+        </header>
+        <div class="main-box-body clearfix">
+            <form role="form">
+                <div class="form-group">
+                    <label for="inputEmail" translate>Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="{{::emailPlaceholder}}" ng-model="user.email">
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="inputPassword" translate>Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="{{::passwordPlaceholder}}" ng-model="user.password">
+                </div>
+
+                
+                <div class="form-group">
+                    
+                    <div class="checkbox-nice checkbox-inline">
+                    <input type="checkbox" name="remember_me" ng-model="user.rememberme" id="remember_me">
+                    <label for="remember_me">
+                    {{::('Remember me' | translate)}}
+                    </label>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <a href="javascript:void(0)" class="btn btn-default btn-raised" translate ui-sref="forgot">Forgot password</a>
+                        <button type="submit" class="btn btn-primary btn-success" translate ng-click="login(user)">Enter</button>
+                    </div>
+                </div>
+
+            </form>
         </div>
-
-
-
-
-
-
-        <div class="form-group">
-            <div class="col-lg-10 col-lg-offset-2">
-                <a href="javascript:void(0)" class="btn btn-default btn-raised" translate ui-sref="forgot">Forgot password</a>
-                <button type="submit" class="btn btn-primary btn-success" translate ng-click="login(user)">Enter</button>
-            </div>
-        </div>
-
-
-    </fieldset>
-
-</form>
-
+    </div>
+</div>

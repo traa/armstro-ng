@@ -3,7 +3,8 @@ define([
 	"scripts",
 	"pace",
 	"gridalicious",
-	"nanoscroller"
+	"nanoscroller",
+	"jqEasyPieChart"
 ], function () {
 
 });

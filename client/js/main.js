@@ -32,6 +32,7 @@ require.config({
 
         jquery: '../bower_components/jquery/dist/jquery.min',
         jqDropdown: './lib/jquery.dropdown',
+        jqEasyPieChart: './lib/jquery.easypiechart.min',
 
         ngResource: '../bower_components/angular-resource/angular-resource.min',
 
@@ -60,6 +61,10 @@ require.config({
 
         angularLoadingBar: {
             deps: ['angular']
+        },
+
+        jqEasyPieChart: {
+            deps: ['jquery']
         },
 
         gridalicious: {
@@ -123,7 +128,7 @@ require(['bundles/nglib'],
 
                     angular.element().ready(function () {
 
-                      
+                       
 
                         angular.bootstrap(document, ['app']);
                     });

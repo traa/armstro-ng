@@ -2,7 +2,9 @@ define([
     "./module",
 
     "./directives/dropdown_toggle",
-    
+    "./directives/ar_tooltip",
+    "./directives/jq_easypiechart",
+
     "./directives/side_menu_widget",
     "./directives/side_forum_list",
 

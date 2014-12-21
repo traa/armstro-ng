@@ -63,132 +63,131 @@ try {
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('app/partials/home.html',
-    '<!-- app/partials/home.html START --><div class="panel panel-default ar-mr-rd">\n' +
-    '    <div class="panel-body ar-pd-rd" ng-click="selectThread()">\n' +
+    '<!-- app/partials/home.html START --><div class="col-lg-6 col-md-6 col-sm-6">\n' +
+    '	<div class="main-box feed">\n' +
+    '		<header class="main-box-header clearfix">\n' +
+    '			<h2 class="pull-left">База знаний</h2>\n' +
+    '		</header>\n' +
+    '		<div class="main-box-body clearfix">\n' +
+    '			<ul>\n' +
+    '				<li class="clearfix">\n' +
+    '					<div class="img" style="font-size: 20px;">\n' +
+    '						<i class="glyphicon glyphicon-pushpin"></i>\n' +
+    '					</div>\n' +
+    '					<div class="title">\n' +
+    '						<a href="#">Общая информация о шарде</a>\n' +
+    '						<div>Как подключиться, какую версию клиента использовать, где скачать хакпаки и многое-многое другое</div>\n' +
+    '					</div>\n' +
+    '					<div class="post-time">\n' +
+    '						Сегодня в 15:12 <a href="#">DM Астрея</a> \n' +
+    '					</div>\n' +
+    '					<div class="time-ago">\n' +
+    '						<i class="fa fa-clock-o"></i> 5 min.\n' +
+    '					</div>\n' +
+    '				</li>\n' +
     '\n' +
-    '	    <div class="col-md-1">\n' +
-    '	    	<i class="mdi-communication-comment ar-spec-blue"></i>\n' +
-    '	    	<span class="label label-success"><i class="mdi-maps-beenhere"></i></span>\n' +
-    '	    </div>\n' +
-    '	    <div class="col-md-7">\n' +
-    '	    	<a href="javascript:;" class="ar-incr-we">Таблица крафта.</a>\n' +
-    '	        <div>\n' +
-    '	        	<small>Информация, связанная с крафт системой Сиалы</small>\n' +
-    '	        </div>\n' +
-    '	    </div>\n' +
-    '	    <div class="col-md-4">\n' +
-    '	        	<ul class="nav nav-pills ar-rd-sz"> \n' +
-    '	        		<li class="">\n' +
-    '	        			<a href="javascript:void(0)" class="ar-pd-lnk-rd">Постов <span class="badge">5</span></a>\n' +
-    '	        		</li> \n' +
-    '	        	</ul>\n' +
-    '	        	<div class="ar-fl-r">\n' +
-    '	        		<small class="ar-rd-fs">Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 12:19" jq-tooltip>Sentinel <i class="mdi-social-person"></i></a></small>\n' +
-    '	        	</div>\n' +
-    '	        	<i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
-    '	    </div>\n' +
-    '\n' +
-    '        \n' +
-    '\n' +
-    '    </div>\n' +
-    '</div>\n' +
-    '\n' +
-    '<div class="panel panel-default ar-mr-rd">\n' +
-    '    <div class="panel-body ar-pd-rd">\n' +
-    '\n' +
-    '	    <div class="col-md-1">\n' +
-    '	    	<i class="mdi-communication-comment ar-spec-blue"></i>\n' +
-    '	    	<span class="label label-success">!</span>\n' +
-    '	    </div>\n' +
-    '	    <div class="col-md-7">\n' +
-    '	    	<a href="javascript:;" class="ar-incr-we">FAQ по билдам и классам.</a>\n' +
-    '	        <div>\n' +
-    '	        	<small>Краткий гайд о том как не запороть персонажа.</small>\n' +
-    '	        </div>\n' +
-    '	    </div>\n' +
-    '	    <div class="col-md-4">\n' +
-    '	        	<ul class="nav nav-pills ar-rd-sz"> \n' +
-    '	        		<li class="">\n' +
-    '	        			<a href="javascript:void(0)" class="ar-pd-lnk-rd">Постов <span class="badge">3</span></a>\n' +
-    '	        		</li> \n' +
-    '	        	</ul>\n' +
-    '	        	<div class="ar-fl-r">\n' +
-    '	        		<small class="ar-rd-fs">Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 3:27" jq-tooltip>traa <i class="mdi-social-person"></i></a></small>\n' +
-    '	        	</div>\n' +
-    '	        	<i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
-    '	    </div>\n' +
-    '\n' +
-    '        \n' +
-    '\n' +
-    '    </div>\n' +
-    '</div>\n' +
+    '				<li class="clearfix">\n' +
+    '					<div class="img" style="font-size: 20px;">\n' +
+    '						<i class="glyphicon glyphicon-circle-arrow-right"></i>\n' +
+    '					</div>\n' +
+    '					<div class="title">\n' +
+    '						<a href="#">Изменения в балансе</a>\n' +
+    '						<div>Все изменения, касающиеся классов, рас, фитов и умений персонажей</div>\n' +
+    '					</div>\n' +
+    '					<div class="post-time">\n' +
+    '						Сегодня в 5:22 <a href="#">truthatenvy</a> \n' +
+    '					</div>\n' +
+    '					<div class="time-ago">\n' +
+    '						<i class="fa fa-clock-o"></i> 18 min.\n' +
+    '					</div>\n' +
+    '				</li>\n' +
     '\n' +
     '\n' +
+    '				<li class="clearfix">\n' +
+    '					<div class="img" style="font-size: 20px;">\n' +
+    '						<i class="glyphicon glyphicon-circle-arrow-right"></i>\n' +
+    '					</div>\n' +
+    '					<div class="title">\n' +
+    '						<a href="#">Карты кладов</a>\n' +
+    '						<div>Вся информация о картах кладов, собранная в одном месте.</div>\n' +
+    '					</div>\n' +
+    '					<div class="post-time">\n' +
+    '						Вчера в 14:17 <a href="#">Sentinel</a> \n' +
+    '					</div>\n' +
+    '					<div class="time-ago">\n' +
+    '						<i class="fa fa-clock-o"></i> 49 min.\n' +
+    '					</div>\n' +
+    '				</li>\n' +
     '\n' +
+    '				<li class="clearfix">\n' +
+    '					<div class="img" style="font-size: 20px; color: #e84e40;">\n' +
+    '						<i class="glyphicon glyphicon-heart"></i>\n' +
+    '					</div>\n' +
+    '					<div class="title">\n' +
+    '						<a href="#">Система ядов</a>\n' +
+    '						<div>Все о ядах, используемых ассассинами.</div>\n' +
+    '					</div>\n' +
+    '					<div class="post-time">\n' +
+    '						Вчера в 12:10 <a href="#">Feron</a> \n' +
+    '					</div>\n' +
+    '					<div class="time-ago">\n' +
+    '						<i class="fa fa-clock-o"></i> 53 min.\n' +
+    '					</div>\n' +
+    '				</li>\n' +
     '\n' +
-    '\n' +
-    '<div class="panel panel-default ar-mr-rd">\n' +
-    '    <div class="panel-body ar-pd-rd">\n' +
-    '\n' +
-    '	    <div class="col-md-1">\n' +
-    '	    	<i class="mdi-communication-comment ar-spec-blue"></i>\n' +
-    '	    	\n' +
-    '	    </div>\n' +
-    '	    <div class="col-md-7">\n' +
-    '	    	<a href="javascript:;" class="ar-incr-we">Информация о подключении.</a>\n' +
-    '	        <div>\n' +
-    '	        	<small>Ссылки, гайды и прочие материалы, необходимые для подключения к шарду.</small>\n' +
-    '	        </div>\n' +
-    '	    </div>\n' +
-    '	    <div class="col-md-4">\n' +
-    '	        	<ul class="nav nav-pills ar-rd-sz"> \n' +
-    '	        		<li class="">\n' +
-    '	        			<a href="javascript:void(0)" class="ar-pd-lnk-rd">Постов <span class="badge">1</span></a>\n' +
-    '	        		</li> \n' +
-    '	        	</ul>\n' +
-    '	        	<div class="ar-fl-r">\n' +
-    '	        		<small class="ar-rd-fs">Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 3:19" jq-tooltip>traa <i class="mdi-social-person"></i></a></small>\n' +
-    '	        	</div>\n' +
-    '	        	<i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
-    '	    </div>\n' +
-    '\n' +
-    '        \n' +
-    '\n' +
-    '    </div>\n' +
-    '</div>\n' +
-    '\n' +
-    '<div class="panel panel-default ar-mr-rd">\n' +
-    '    <div class="panel-body ar-pd-rd">\n' +
-    '\n' +
-    '	    <div class="col-md-1">\n' +
-    '	    	<i class="mdi-communication-comment ar-spec-blue"></i>\n' +
-    '	    	<span class="label label-success">!</span>\n' +
-    '	    </div>\n' +
-    '	    <div class="col-md-7">\n' +
-    '	    	<a href="javascript:;" class="ar-incr-we">Обсуждение нового форума.</a>\n' +
-    '	        <div>\n' +
-    '	        	<small>Все идеи, предложения и пожелания могут быть обсуждены здесь.</small>\n' +
-    '	        </div>\n' +
-    '	    </div>\n' +
-    '	    <div class="col-md-4">\n' +
-    '	        	<ul class="nav nav-pills ar-rd-sz"> \n' +
-    '	        		<li class="">\n' +
-    '	        			<a href="javascript:void(0)" class="ar-pd-lnk-rd">Постов <span class="badge">13</span></a>\n' +
-    '	        		</li> \n' +
-    '	        	</ul>\n' +
-    '	        	<div class="ar-fl-r">\n' +
-    '	        		<small class="ar-rd-fs">Последний от: <a href="javascript:;" data-toggle="tooltip" data-placement="right" title="" data-original-title="19/12/14 at 2:19" jq-tooltip>traa <i class="mdi-social-person"></i></a></small>\n' +
-    '	        	</div>\n' +
-    '	        	<i class="mdi-av-play-arrow ar-ar-pos"></i>\n' +
-    '	    </div>\n' +
-    '\n' +
-    '        \n' +
-    '\n' +
-    '    </div>\n' +
+    '			</ul>\n' +
+    '		</div>\n' +
+    '	</div>\n' +
     '</div>\n' +
     '\n' +
     '\n' +
-    '<!-- app/partials/home.html END -->');
+    '<div class="col-lg-4 col-md-6 col-sm-6">\n' +
+    '	<div class="main-box clearfix project-box emerald-box">\n' +
+    '		<div class="main-box-body clearfix">\n' +
+    '			<div class="project-box-header emerald-bg">\n' +
+    '				<div class="name">\n' +
+    '					<a href="#">\n' +
+    '					The Fighter\n' +
+    '					</a>\n' +
+    '				</div>\n' +
+    '			</div>\n' +
+    '			<div class="project-box-content">\n' +
+    '				<span class="chart" data-percent="39" jq-easy-pie-chart>\n' +
+    '					<span class="percent">39</span>%<br>\n' +
+    '					<span class="lbl">completed</span>\n' +
+    '					<canvas height="130" width="130"></canvas>\n' +
+    '				</span>\n' +
+    '			</div>\n' +
+    '			<div class="project-box-footer clearfix">\n' +
+    '				<a href="#">\n' +
+    '					<span class="value">12</span>\n' +
+    '					<span class="label">Tasks</span>\n' +
+    '				</a>\n' +
+    '				<a href="#">\n' +
+    '					<span class="value">1</span>\n' +
+    '					<span class="label">Alerts</span>\n' +
+    '				</a>\n' +
+    '				<a href="#">\n' +
+    '					<span class="value">82</span>\n' +
+    '					<span class="label">Messages</span>\n' +
+    '				</a>\n' +
+    '			</div>\n' +
+    '			<div class="project-box-ultrafooter clearfix">\n' +
+    '				<img class="project-img-owner" alt="" src="img/samples/scarlet-159.png" ar-tooltip title="" data-original-title="Scarlett Johansson">\n' +
+    '\n' +
+    '				<img class="project-img-owner" alt="" src="img/samples/lima-300.jpg" ar-tooltip title="" data-original-title="Adriana Lima">\n' +
+    '\n' +
+    '				<img class="project-img-owner" alt="" src="img/samples/emma-300.jpg" ar-tooltip title="" data-original-title="Emma Watson">\n' +
+    '\n' +
+    '				<img class="project-img-owner" alt="" src="img/samples/angelina-300.jpg" ar-tooltip title="" data-original-title="Angelina Jolie">\n' +
+    '\n' +
+    '				<a href="#" class="link pull-right">\n' +
+    '					<i class="fa fa-arrow-circle-right fa-lg"></i>\n' +
+    '				</a>\n' +
+    '			</div>\n' +
+    '		</div>\n' +
+    '	</div>\n' +
+    '</div><!-- app/partials/home.html END -->');
 }]);
 })();
 
@@ -370,33 +369,13 @@ try {
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('bars/views/footer_layout.html',
-    '<!-- bars/views/footer_layout.html START --><footer class="footer">\n' +
-    '  <div class="container">\n' +
-    '   <div class="row">\n' +
-    '      <div class="col-xs-6 col-md-4">\n' +
-    '          <p>\n' +
-    '          {{::(\'Connect\' | translate)}}: <strong>193.108.209.210:5121</strong>\n' +
-    '          </p>\n' +
-    '      </div>\n' +
-    '      <div class="col-xs-6 col-md-4">\n' +
-    '            <h6 style="margin-bottom: 5px;">armstro-ng@{{::(\'@VERSION\' | translate)}}</h6>\n' +
-    '            <h5 style="margin:0;">\n' +
-    '                <i class="mdi-action-extension ar-red-footer-icon"></i>\n' +
-    '                truthatenvy\n' +
-    '            </h5>\n' +
-    '      </div>\n' +
-    '      <div class="col-xs-6 col-md-4">\n' +
-    '          \n' +
-    '         <div class="icon-preview">\n' +
-    '            <!-- <h5 style="float:right;">stagedown@gmail.com</h5>\n' +
-    '            <i class="mdi-action-bug-report ar-fs-lg ar-footer-icon"></i>  -->\n' +
-    '          </div>\n' +
+    '<!-- bars/views/footer_layout.html START --><footer id="footer-bar" class="row">\n' +
+    '    <p id="footer-copyright" class="col-xs-12">\n' +
+    '        armstro-ng@{{::(\'@VERSION\' | translate)}}\n' +
+    '    </p>\n' +
+    '</footer>\n' +
     '\n' +
-    '\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</footer><!-- bars/views/footer_layout.html END -->');
+    '<!-- bars/views/footer_layout.html END -->');
 }]);
 })();
 
@@ -639,7 +618,8 @@ module.run(['$templateCache', function($templateCache) {
     '                <li class="dropdown hidden-xs">\n' +
     '                    <a class="btn dropdown-toggle" data-toggle="dropdown">\n' +
     '                        <i class="fa fa-bell"></i>\n' +
-    '                        <span class="count">8</span>\n' +
+    '                        <!-- style="background-color:#03a9f4;" -->\n' +
+    '                        <span class="count" >8</span>\n' +
     '                    </a>\n' +
     '                    <ul class="dropdown-menu notifications-list">\n' +
     '                        <li class="pointer">\n' +
@@ -693,7 +673,8 @@ module.run(['$templateCache', function($templateCache) {
     '                <li class="dropdown hidden-xs">\n' +
     '                    <a class="btn dropdown-toggle" data-toggle="dropdown">\n' +
     '                        <i class="fa fa-envelope-o"></i>\n' +
-    '                        <span class="count">16</span>\n' +
+    '                        <!-- style="background-color:#03a9f4;" -->\n' +
+    '                        <span class="count" >16</span>\n' +
     '                    </a>\n' +
     '                    <ul class="dropdown-menu notifications-list messages-list">\n' +
     '                        <li class="pointer">\n' +
@@ -870,7 +851,7 @@ module.run(['$templateCache', function($templateCache) {
     '                        <a href="javascript:;" ui-sref="home">\n' +
     '                            <i class="fa fa-star"></i>\n' +
     '                            <span translate>Bookmarks</span>\n' +
-    '                            <span class="label label-success label-circle pull-right" style="width:18px;">4</span>\n' +
+    '                            <span class="label label-primary label-circle pull-right" style="width:18px;">4</span>\n' +
     '                            \n' +
     '                        </a>\n' +
     '                    </li>\n' +
@@ -890,7 +871,7 @@ module.run(['$templateCache', function($templateCache) {
     '                                <a href="javascript:;" class="ar-pd-lft" us-sref="home">\n' +
     '                                    \n' +
     '                                    <i class="fa fa-coffee" style="color:red;"></i>\n' +
-    '                                    <span data-toggle="tooltip" data-original-title="Фиксы, правки, изменения в балансе и прочие нюансы, важные для комфортной игры.">Особенности Сиалы</span>\n' +
+    '                                    <span ar-tooltip data-original-title="Фиксы, правки, изменения в балансе и прочие нюансы, важные для комфортной игры.">Особенности Сиалы</span>\n' +
     '                                    <!-- <span class="label label-danger label-circle pull-right" style="width:18px;margin-top:10px;margin-right:4px;">\n' +
     '                                        <i class="fa fa-microphone"></i> -->\n' +
     '                                    </span>\n' +
@@ -900,7 +881,7 @@ module.run(['$templateCache', function($templateCache) {
     '                                <a href="javascript:;" class="ar-pd-lft" us-sref="home">\n' +
     '                                    \n' +
     '                                    <i class="fa fa-coffee"></i>\n' +
-    '                                    <span data-toggle="tooltip" data-original-title="Архив новостей от летописца Гаулдура">Архив Гаулдура</span>\n' +
+    '                                    <span ar-tooltip data-original-title="Архив новостей от летописца Гаулдура">Архив Гаулдура</span>\n' +
     '                                    \n' +
     '                                </a>\n' +
     '                            </li>\n' +
@@ -919,7 +900,7 @@ module.run(['$templateCache', function($templateCache) {
     '                                <a href="javascript:;" class="ar-pd-lft" us-sref="home">\n' +
     '                                    \n' +
     '                                    <i class="fa fa-coffee"></i>\n' +
-    '                                    <span data-toggle="tooltip" data-original-title="Организация, охраняющая безопасность Валиостра">Королевские песочники</span>\n' +
+    '                                    <span ar-tooltip data-original-title="Организация, охраняющая безопасность Валиостра">Королевские песочники</span>\n' +
     '                                    \n' +
     '                                </a>\n' +
     '\n' +
@@ -929,7 +910,7 @@ module.run(['$templateCache', function($templateCache) {
     '                                <a href="javascript:;" class="ar-pd-lft" us-sref="home">\n' +
     '                                    \n' +
     '                                    <i class="fa fa-coffee"></i>\n' +
-    '                                    <span data-toggle="tooltip" data-original-title="Основная ударная сила Неназываемого, следящая за порядком в Рачьем Герцогстве">Черная Инквизиция</span>\n' +
+    '                                    <span ar-tooltip data-original-title="Основная ударная сила Неназываемого, следящая за порядком в Рачьем Герцогстве">Черная Инквизиция</span>\n' +
     '                                    \n' +
     '                                </a>\n' +
     '\n' +

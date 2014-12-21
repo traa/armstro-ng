@@ -68,11 +68,14 @@ module.run(['$templateCache', function($templateCache) {
     '		<header class="main-box-header clearfix">\n' +
     '			<h2 class="pull-left">База знаний</h2>\n' +
     '		</header>\n' +
-    '		<div class="main-box-body clearfix">\n' +
+    '		<div class="main-box-body clearfix" style="padding-left:15px;">\n' +
     '			<ul>\n' +
-    '				<li class="clearfix">\n' +
+    '				<li class="clearfix ar-thread-row">\n' +
     '					<div class="img" style="font-size: 20px;">\n' +
     '						<i class="glyphicon glyphicon-pushpin"></i>\n' +
+    '						<div>\n' +
+    '							<span class="label label-primary" style="font-size:10px;">new</span>\n' +
+    '						</div>\n' +
     '					</div>\n' +
     '					<div class="title">\n' +
     '						<a href="#">Общая информация о шарде</a>\n' +
@@ -81,12 +84,18 @@ module.run(['$templateCache', function($templateCache) {
     '					<div class="post-time">\n' +
     '						Сегодня в 15:12 <a href="#">DM Астрея</a> \n' +
     '					</div>\n' +
-    '					<div class="time-ago">\n' +
+    '					<div class="time-ago ar-ta-fx">\n' +
     '						<i class="fa fa-clock-o"></i> 5 min.\n' +
+    '						<div>\n' +
+    '							<i class="fa fa-comments"></i> <a href="javascript:;">3</a>\n' +
+    '						</div>\n' +
+    '						<div>\n' +
+    '							<i class="fa fa-heart" style="color: red;"></i> <a href="javascript:;">11</a>\n' +
+    '						</div>\n' +
     '					</div>\n' +
     '				</li>\n' +
     '\n' +
-    '				<li class="clearfix">\n' +
+    '				<li class="clearfix ar-thread-row">\n' +
     '					<div class="img" style="font-size: 20px;">\n' +
     '						<i class="glyphicon glyphicon-circle-arrow-right"></i>\n' +
     '					</div>\n' +
@@ -97,13 +106,16 @@ module.run(['$templateCache', function($templateCache) {
     '					<div class="post-time">\n' +
     '						Сегодня в 5:22 <a href="#">truthatenvy</a> \n' +
     '					</div>\n' +
-    '					<div class="time-ago">\n' +
+    '					<div class="time-ago ar-ta-fx">\n' +
     '						<i class="fa fa-clock-o"></i> 18 min.\n' +
+    '						<div>\n' +
+    '							<i class="fa fa-comments"></i> <a href="javascript:;">8</a>\n' +
+    '						</div>\n' +
     '					</div>\n' +
     '				</li>\n' +
     '\n' +
     '\n' +
-    '				<li class="clearfix">\n' +
+    '				<li class="clearfix ar-thread-row">\n' +
     '					<div class="img" style="font-size: 20px;">\n' +
     '						<i class="glyphicon glyphicon-circle-arrow-right"></i>\n' +
     '					</div>\n' +
@@ -114,12 +126,15 @@ module.run(['$templateCache', function($templateCache) {
     '					<div class="post-time">\n' +
     '						Вчера в 14:17 <a href="#">Sentinel</a> \n' +
     '					</div>\n' +
-    '					<div class="time-ago">\n' +
+    '					<div class="time-ago ar-ta-fx">\n' +
     '						<i class="fa fa-clock-o"></i> 49 min.\n' +
+    '						<div>\n' +
+    '							<i class="fa fa-comments"></i> <a href="javascript:;">5</a>\n' +
+    '						</div>\n' +
     '					</div>\n' +
     '				</li>\n' +
     '\n' +
-    '				<li class="clearfix">\n' +
+    '				<li class="clearfix ar-thread-row">\n' +
     '					<div class="img" style="font-size: 20px; color: #e84e40;">\n' +
     '						<i class="glyphicon glyphicon-heart"></i>\n' +
     '					</div>\n' +
@@ -130,8 +145,14 @@ module.run(['$templateCache', function($templateCache) {
     '					<div class="post-time">\n' +
     '						Вчера в 12:10 <a href="#">Feron</a> \n' +
     '					</div>\n' +
-    '					<div class="time-ago">\n' +
+    '					<div class="time-ago ar-ta-fx">\n' +
     '						<i class="fa fa-clock-o"></i> 53 min.\n' +
+    '						<div>\n' +
+    '							<i class="fa fa-comments"></i> <a href="javascript:;">14</a>\n' +
+    '						</div>\n' +
+    '						<div>\n' +
+    '							<i class="fa fa-heart" style="color: red;"></i> <a href="javascript:;">2</a>\n' +
+    '						</div>\n' +
     '					</div>\n' +
     '				</li>\n' +
     '\n' +
@@ -141,45 +162,49 @@ module.run(['$templateCache', function($templateCache) {
     '</div>\n' +
     '\n' +
     '\n' +
-    '<div class="col-lg-4 col-md-6 col-sm-6">\n' +
+    '<div class="col-lg-6 col-md-6 col-sm-6">\n' +
     '	<div class="main-box clearfix project-box emerald-box">\n' +
     '		<div class="main-box-body clearfix">\n' +
     '			<div class="project-box-header emerald-bg">\n' +
     '				<div class="name">\n' +
     '					<a href="#">\n' +
-    '					The Fighter\n' +
+    '					Статистика форума\n' +
     '					</a>\n' +
     '				</div>\n' +
     '			</div>\n' +
     '			<div class="project-box-content">\n' +
-    '				<span class="chart" data-percent="39" jq-easy-pie-chart>\n' +
-    '					<span class="percent">39</span>%<br>\n' +
-    '					<span class="lbl">completed</span>\n' +
+    '				<span class="chart" data-percent="43" jq-easy-pie-chart>\n' +
+    '					<span class="percent">43</span>%<br>\n' +
+    '					<span class="lbl">эффективности</span>\n' +
+    '					<span>+4 опыта</span>\n' +
     '					<canvas height="130" width="130"></canvas>\n' +
     '				</span>\n' +
     '			</div>\n' +
     '			<div class="project-box-footer clearfix">\n' +
     '				<a href="#">\n' +
-    '					<span class="value">12</span>\n' +
-    '					<span class="label">Tasks</span>\n' +
+    '					<span class="value">30</span>\n' +
+    '					<span class="label">Сообщений</span>\n' +
     '				</a>\n' +
     '				<a href="#">\n' +
-    '					<span class="value">1</span>\n' +
-    '					<span class="label">Alerts</span>\n' +
+    '					<span class="value">13</span>\n' +
+    '					<span class="label">Полезных</span>\n' +
     '				</a>\n' +
     '				<a href="#">\n' +
-    '					<span class="value">82</span>\n' +
-    '					<span class="label">Messages</span>\n' +
+    '					<span class="value">4</span>\n' +
+    '					<span class="label">Темы</span>\n' +
     '				</a>\n' +
     '			</div>\n' +
     '			<div class="project-box-ultrafooter clearfix">\n' +
-    '				<img class="project-img-owner" alt="" src="img/samples/scarlet-159.png" ar-tooltip title="" data-original-title="Scarlett Johansson">\n' +
     '\n' +
-    '				<img class="project-img-owner" alt="" src="img/samples/lima-300.jpg" ar-tooltip title="" data-original-title="Adriana Lima">\n' +
+    '				<h4 style="text-align:right;margin-top:0px;">Активные пользователи</h4>\n' +
     '\n' +
-    '				<img class="project-img-owner" alt="" src="img/samples/emma-300.jpg" ar-tooltip title="" data-original-title="Emma Watson">\n' +
+    '				<img class="project-img-owner" alt="" src="http://lorempixel.com/56/56/people/7/" ar-tooltip title="" data-original-title="Petrot">\n' +
     '\n' +
-    '				<img class="project-img-owner" alt="" src="img/samples/angelina-300.jpg" ar-tooltip title="" data-original-title="Angelina Jolie">\n' +
+    '				<img class="project-img-owner" alt="" src="http://lorempixel.com/56/56/people/1/" ar-tooltip title="" data-original-title="DM Астрея">\n' +
+    '\n' +
+    '				<img class="project-img-owner" alt="" src="http://lorempixel.com/56/56/people/8/" ar-tooltip title="" data-original-title="Feron">\n' +
+    '\n' +
+    '				<img class="project-img-owner" alt="" src="http://lorempixel.com/output/people-q-c-44-44-4.jpg" ar-tooltip title="" data-original-title="Sentinel">\n' +
     '\n' +
     '				<a href="#" class="link pull-right">\n' +
     '					<i class="fa fa-arrow-circle-right fa-lg"></i>\n' +

@@ -5,6 +5,17 @@ a {
 .ar-pd-lft {
 	padding-left: 40px !important;
 }
+.ar-thread-row {
+	padding: 10px 0 10px 5px !important;
+}
+.ar-thread-row:hover {
+	background: #f5f5f5;
+	color: #555;
+}
+
+.ar-ta-fx {
+	right: 3px !important;
+}
 
 @-webkit-keyframes fadeOutDown {
   0% {

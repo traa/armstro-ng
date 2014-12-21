@@ -12,7 +12,7 @@
             gettextCatalog.setCurrentLanguage('ru');
 
             gettextCatalog.setStrings("ru", {      
-                '@VERSION': '0.069',
+                '@VERSION': '0.075',
                 'Create': 'Создать',
                 '@Actions': '@Действия',
                 'Messages': 'Сообщения',

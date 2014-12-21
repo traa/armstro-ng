@@ -1,5 +1,5 @@
 /**
- * @namespace common
+ * @namespace nwn
  */
 define(['angular'], function (angular) {
     'use strict';

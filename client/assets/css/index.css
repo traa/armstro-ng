@@ -17,6 +17,11 @@ a {
 	right: 3px !important;
 }
 
+.ar-inc-mrg {
+	margin-left: 10px !important;
+	margin-right: 10px !important;
+}
+
 @-webkit-keyframes fadeOutDown {
   0% {
 	opacity: 1;

@@ -50,7 +50,7 @@ try {
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('app/partials/home.html',
-    '<!-- app/partials/home.html START --><div class="col-lg-6 col-md-6 col-sm-6">\n' +
+    '<!-- app/partials/home.html START --><div class="col-lg-6 col-md-6 col-sm-6" id="threadsListSection">\n' +
     '	<div class="main-box feed">\n' +
     '		<header class="main-box-header clearfix">\n' +
     '			<h2 class="pull-left">Особенности Сиалы</h2>\n' +
@@ -65,7 +65,7 @@ module.run(['$templateCache', function($templateCache) {
     '						</div>\n' +
     '					</div>\n' +
     '					<div class="title">\n' +
-    '						<a href="#">Общая информация о шарде</a>\n' +
+    '						<a href="javascript:;" ng-click="showThread()">Общая информация о шарде</a>\n' +
     '						<div>Как подключиться, какую версию клиента использовать, где скачать хакпаки и многое-многое другое</div>\n' +
     '					</div>\n' +
     '					<div class="post-time">\n' +
@@ -149,8 +149,11 @@ module.run(['$templateCache', function($templateCache) {
     '</div>\n' +
     '\n' +
     '\n' +
-    '<div class="col-lg-6 col-md-6 col-sm-6">\n' +
-    '	<div class="main-box clearfix project-box emerald-box">\n' +
+    '<div class="col-lg-6 col-md-6 col-sm-6" id="postsListSection" style="overflow:auto;height: 500px;">\n' +
+    '	\n' +
+    '\n' +
+    '	<!-- @TODO: move to separate widget -->\n' +
+    '	<div class="main-box clearfix project-box emerald-box" ng-show="!threadChosen">\n' +
     '		<div class="main-box-body clearfix">\n' +
     '			<div class="project-box-header emerald-bg">\n' +
     '				<div class="name">\n' +
@@ -199,7 +202,13 @@ module.run(['$templateCache', function($templateCache) {
     '			</div>\n' +
     '		</div>\n' +
     '	</div>\n' +
-    '</div><!-- app/partials/home.html END -->');
+    '\n' +
+    '\n' +
+    '	<posts-list ng-if="threadChosen"></posts-list>\n' +
+    '\n' +
+    '\n' +
+    '</div>\n' +
+    '<!-- app/partials/home.html END -->');
 }]);
 })();
 
@@ -1149,6 +1158,103 @@ module.run(['$templateCache', function($templateCache) {
     '                    <option value="wizard">Wizard</option>\n' +
     '</select>\n' +
     '<!-- nwn/views/class_choose_input.html END -->');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('posts/views/posts_list.html');
+} catch (e) {
+  module = angular.module('posts/views/posts_list.html', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('posts/views/posts_list.html',
+    '<!-- posts/views/posts_list.html START --><section id="cd-timeline" class="cd-container">\n' +
+    '     \n' +
+    '     <div class="cd-timeline-block">\n' +
+    '          <div class="cd-timeline-img cd-picture">\n' +
+    '               <i class="fa fa-photo fa-2x"></i>\n' +
+    '          </div>\n' +
+    '\n' +
+    '          <div class="cd-timeline-content">\n' +
+    '               \n' +
+    '               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>\n' +
+    '               <!-- <div class="clearfix">\n' +
+    '                    <a class="btn btn-primary pull-right">Read more</a>\n' +
+    '               </div> -->\n' +
+    '               <span class="cd-date ar-inc-mrg">11:59</span>\n' +
+    '          </div>\n' +
+    '     </div>\n' +
+    '\n' +
+    '\n' +
+    '     <div class="cd-timeline-block">\n' +
+    '          <div class="cd-timeline-img cd-movie">\n' +
+    '               <i class="fa fa-video-camera fa-2x"></i>\n' +
+    '          </div>\n' +
+    '\n' +
+    '          <div class="cd-timeline-content">\n' +
+    '               \n' +
+    '               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>\n' +
+    '               \n' +
+    '               <span class="cd-date ar-inc-mrg">15:40</span>\n' +
+    '          </div>\n' +
+    '     </div>\n' +
+    '\n' +
+    '     <div class="cd-timeline-block">\n' +
+    '          <div class="cd-timeline-img cd-picture">\n' +
+    '               <i class="fa fa-photo fa-2x"></i>\n' +
+    '          </div>\n' +
+    '\n' +
+    '          <div class="cd-timeline-content">\n' +
+    '               \n' +
+    '               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>\n' +
+    '              \n' +
+    '               <span class="cd-date ar-inc-mrg">18:12</span>\n' +
+    '          </div>\n' +
+    '     </div>\n' +
+    '\n' +
+    '     <div class="cd-timeline-block">\n' +
+    '          <div class="cd-timeline-img cd-location">\n' +
+    '               <i class="fa fa-map-marker fa-2x"></i>\n' +
+    '          </div>\n' +
+    '\n' +
+    '          <div class="cd-timeline-content">\n' +
+    '               \n' +
+    '               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>\n' +
+    '<!--                <div class="clearfix">\n' +
+    '                    <a class="btn btn-primary pull-right">Read more</a>\n' +
+    '               </div> -->\n' +
+    '               <span class="cd-date ar-inc-mrg">20:48</span>\n' +
+    '          </div>\n' +
+    '     </div>\n' +
+    '\n' +
+    '     <div class="cd-timeline-block">\n' +
+    '          <div class="cd-timeline-img cd-location">\n' +
+    '               <i class="fa fa-map-marker fa-2x"></i>\n' +
+    '          </div>\n' +
+    '\n' +
+    '          <div class="cd-timeline-content">\n' +
+    '               \n' +
+    '               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>\n' +
+    '<!--                <div class="clearfix">\n' +
+    '                    <a class="btn btn-primary pull-right">Read more</a>\n' +
+    '               </div> -->\n' +
+    '               <span class="cd-date ar-inc-mrg">21:22</span>\n' +
+    '          </div>\n' +
+    '     </div>\n' +
+    '\n' +
+    '     <div class="cd-timeline-block">\n' +
+    '          <div class="cd-timeline-img cd-movie">\n' +
+    '               <i class="fa fa-video-camera fa-2x"></i>\n' +
+    '          </div>\n' +
+    '\n' +
+    '          <div class="cd-timeline-content">\n' +
+    '               \n' +
+    '               <p>This is the content of the last section</p>\n' +
+    '               <span class="cd-date ar-inc-mrg">23:59</span>\n' +
+    '          </div>\n' +
+    '     </div>\n' +
+    '</section><!-- posts/views/posts_list.html END -->');
 }]);
 })();
 });

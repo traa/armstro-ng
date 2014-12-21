@@ -16,6 +16,7 @@ define(['angular'], function (angular) {
         'app.directives',
         'bars',
         'auth',
-        'nwn'
+        'nwn',
+        'posts'
     ]);
 });

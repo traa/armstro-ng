@@ -22,6 +22,10 @@ require.config({
         {
             name: 'nwn',
             location: 'components/nwn'
+        },
+        {
+            name: 'posts',
+            location: 'components/posts'
         }
     ],
     paths: {

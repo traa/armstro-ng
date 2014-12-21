@@ -3,5 +3,6 @@ define([
     "common",
     "bars",
     "auth",
-    "nwn"
+    "nwn",
+    "posts"
 ], function() { });

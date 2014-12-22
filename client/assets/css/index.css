@@ -18,8 +18,17 @@ a {
 }
 
 .ar-inc-mrg {
-	margin-left: 10px !important;
+	margin-left: 27px !important;
 	margin-right: 10px !important;
+}
+
+/*OVERRIDE*/
+#cd-timeline::before {
+	left: 86% !important;
+}
+
+.cd-timeline-img {
+	left: 86% !important;
 }
 
 @-webkit-keyframes fadeOutDown {

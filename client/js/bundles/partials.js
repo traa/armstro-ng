@@ -1171,89 +1171,123 @@ module.run(['$templateCache', function($templateCache) {
   $templateCache.put('posts/views/posts_list.html',
     '<!-- posts/views/posts_list.html START --><section id="cd-timeline" class="cd-container">\n' +
     '     \n' +
-    '     <div class="cd-timeline-block">\n' +
-    '          <div class="cd-timeline-img cd-picture">\n' +
-    '               <i class="fa fa-photo fa-2x"></i>\n' +
-    '          </div>\n' +
-    '\n' +
-    '          <div class="cd-timeline-content">\n' +
-    '               \n' +
-    '               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>\n' +
-    '               <!-- <div class="clearfix">\n' +
-    '                    <a class="btn btn-primary pull-right">Read more</a>\n' +
-    '               </div> -->\n' +
-    '               <span class="cd-date ar-inc-mrg">11:59</span>\n' +
-    '          </div>\n' +
-    '     </div>\n' +
-    '\n' +
-    '\n' +
-    '     <div class="cd-timeline-block">\n' +
-    '          <div class="cd-timeline-img cd-movie">\n' +
-    '               <i class="fa fa-video-camera fa-2x"></i>\n' +
-    '          </div>\n' +
-    '\n' +
-    '          <div class="cd-timeline-content">\n' +
-    '               \n' +
-    '               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>\n' +
-    '               \n' +
-    '               <span class="cd-date ar-inc-mrg">15:40</span>\n' +
-    '          </div>\n' +
-    '     </div>\n' +
     '\n' +
     '     <div class="cd-timeline-block">\n' +
     '          <div class="cd-timeline-img cd-picture">\n' +
-    '               <i class="fa fa-photo fa-2x"></i>\n' +
+    '               <i class="fa fa-thumbs-up fa-2x"></i>\n' +
     '          </div>\n' +
     '\n' +
-    '          <div class="cd-timeline-content">\n' +
-    '               \n' +
-    '               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>\n' +
-    '              \n' +
-    '               <span class="cd-date ar-inc-mrg">18:12</span>\n' +
+    '\n' +
+    '          <!-- float:right;top:-106px;left:-60px; -->\n' +
+    '          <div class="col-lg-10 col-md-8 col-sm-8">\n' +
+    '               <div id="user-profile" style="padding-right:0px;float:left;width:194px;">\n' +
+    '                    <div class="main-box clearfix">\n' +
+    '                         <header class="main-box-header clearfix" style="font-size:12px;min-height:34px;padding: 0px 20px;">\n' +
+    '                              <h2>Truthatenvy</h2>\n' +
+    '                         </header>\n' +
+    '                         <div class="main-box-body clearfix" style="padding-bottom:3px;">\n' +
+    '                              <div class="profile-status" style="padding-bottom: 4px;">\n' +
+    '                                   <i class="fa fa-circle"></i> Online\n' +
+    '                              </div>\n' +
+    '                              <img style="width:80px;height:80px;margin-bottom:5px;" src="http://lorempixel.com/output/people-q-c-120-120-3.jpg" alt="" class="profile-img img-responsive center-block">\n' +
+    '                              <div class="profile-label" style="font-size:12px;">\n' +
+    '                                   <span class="label label-danger">Admin</span>\n' +
+    '                              </div>\n' +
+    '                              <div class="profile-stars">\n' +
+    '                                   <i class="fa fa-star"></i>\n' +
+    '                                   <i class="fa fa-star"></i>\n' +
+    '                                   <i class="fa fa-star"></i>\n' +
+    '                                   <i class="fa fa-star"></i>\n' +
+    '                                   <i class="fa fa-star-o"></i>\n' +
+    '                                   <div style="font-size:12px;">Super User</div>\n' +
+    '                              </div>\n' +
+    '                              <div class="profile-since" style="font-size:10px;">\n' +
+    '                                   Member since: Jan 2012\n' +
+    '                              </div>\n' +
+    '                              <div class="profile-details" style="padding: 5px 0; margin: 5px 0;">\n' +
+    '                              <ul class="fa-ul">\n' +
+    '                                   <li>\n' +
+    '                                        <i class="fa-li fa fa-comment"></i>Posts: <span>828</span>\n' +
+    '                                   </li>\n' +
+    '                              </ul>\n' +
+    '                              </div>\n' +
+    '                              <div class="profile-message-btn center-block text-center">\n' +
+    '                                   <i class="fa fa-envelope"></i>\n' +
+    '                              </div>\n' +
+    '                         </div>\n' +
+    '                    </div>\n' +
+    '               </div>\n' +
+    '               <div class="cd-timeline-content" style="padding-left:0px;float:right;width:295px;height:286px;">\n' +
+    '                    \n' +
+    '                    <p>Добро пожаловать на обновленный форум самого старейшего шарда Neverwinter Nights в Рунете!</p>\n' +
+    '                    <!-- <div class="clearfix">\n' +
+    '                         <a class="btn btn-primary pull-right">Read more</a>\n' +
+    '                    </div> -->\n' +
+    '                    <span class="cd-date ar-inc-mrg">11:59</span>\n' +
+    '               </div>\n' +
     '          </div>\n' +
+    '\n' +
+    '\n' +
     '     </div>\n' +
     '\n' +
     '     <div class="cd-timeline-block">\n' +
-    '          <div class="cd-timeline-img cd-location">\n' +
-    '               <i class="fa fa-map-marker fa-2x"></i>\n' +
+    '          <div class="cd-timeline-img cd-picture">\n' +
+    '               <i class="fa fa-thumbs-up fa-2x"></i>\n' +
     '          </div>\n' +
     '\n' +
-    '          <div class="cd-timeline-content">\n' +
-    '               \n' +
-    '               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>\n' +
-    '<!--                <div class="clearfix">\n' +
-    '                    <a class="btn btn-primary pull-right">Read more</a>\n' +
-    '               </div> -->\n' +
-    '               <span class="cd-date ar-inc-mrg">20:48</span>\n' +
+    '\n' +
+    '          <!-- float:right;top:-106px;left:-60px; -->\n' +
+    '          <div class="col-lg-10 col-md-8 col-sm-8">\n' +
+    '               <div id="user-profile" style="padding-right:0px;float:left;width:194px;">\n' +
+    '                    <div class="main-box clearfix">\n' +
+    '                         <header class="main-box-header clearfix" style="font-size:12px;min-height:34px;padding: 0px 20px;">\n' +
+    '                              <h2>Truthatenvy</h2>\n' +
+    '                         </header>\n' +
+    '                         <div class="main-box-body clearfix" style="padding-bottom:3px;">\n' +
+    '                              <div class="profile-status" style="padding-bottom: 4px;">\n' +
+    '                                   <i class="fa fa-circle"></i> Online\n' +
+    '                              </div>\n' +
+    '                              <img style="width:80px;height:80px;margin-bottom:5px;" src="http://lorempixel.com/output/people-q-c-120-120-3.jpg" alt="" class="profile-img img-responsive center-block">\n' +
+    '                              <div class="profile-label" style="font-size:12px;">\n' +
+    '                                   <span class="label label-danger">Admin</span>\n' +
+    '                              </div>\n' +
+    '                              <div class="profile-stars">\n' +
+    '                                   <i class="fa fa-star"></i>\n' +
+    '                                   <i class="fa fa-star"></i>\n' +
+    '                                   <i class="fa fa-star"></i>\n' +
+    '                                   <i class="fa fa-star"></i>\n' +
+    '                                   <i class="fa fa-star-o"></i>\n' +
+    '                                   <div style="font-size:12px;">Super User</div>\n' +
+    '                              </div>\n' +
+    '                              <div class="profile-since" style="font-size:10px;">\n' +
+    '                                   Member since: Jan 2012\n' +
+    '                              </div>\n' +
+    '                              <div class="profile-details" style="padding: 5px 0; margin: 5px 0;">\n' +
+    '                              <ul class="fa-ul">\n' +
+    '                                   <li>\n' +
+    '                                        <i class="fa-li fa fa-comment"></i>Posts: <span>828</span>\n' +
+    '                                   </li>\n' +
+    '                              </ul>\n' +
+    '                              </div>\n' +
+    '                              <div class="profile-message-btn center-block text-center">\n' +
+    '                                   <i class="fa fa-envelope"></i>\n' +
+    '                              </div>\n' +
+    '                         </div>\n' +
+    '                    </div>\n' +
+    '               </div>\n' +
+    '               <div class="cd-timeline-content" style="padding-left:0px;float:right;width:295px;height:286px;">\n' +
+    '                    \n' +
+    '                    <p>Вас приветствует команда Сиалы!</p>\n' +
+    '                    <!-- <div class="clearfix">\n' +
+    '                         <a class="btn btn-primary pull-right">Read more</a>\n' +
+    '                    </div> -->\n' +
+    '                    <span class="cd-date ar-inc-mrg" style="right: -50%;">12:02</span>\n' +
+    '               </div>\n' +
     '          </div>\n' +
+    '\n' +
+    '\n' +
     '     </div>\n' +
-    '\n' +
-    '     <div class="cd-timeline-block">\n' +
-    '          <div class="cd-timeline-img cd-location">\n' +
-    '               <i class="fa fa-map-marker fa-2x"></i>\n' +
-    '          </div>\n' +
-    '\n' +
-    '          <div class="cd-timeline-content">\n' +
-    '               \n' +
-    '               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>\n' +
-    '<!--                <div class="clearfix">\n' +
-    '                    <a class="btn btn-primary pull-right">Read more</a>\n' +
-    '               </div> -->\n' +
-    '               <span class="cd-date ar-inc-mrg">21:22</span>\n' +
-    '          </div>\n' +
-    '     </div>\n' +
-    '\n' +
-    '     <div class="cd-timeline-block">\n' +
-    '          <div class="cd-timeline-img cd-movie">\n' +
-    '               <i class="fa fa-video-camera fa-2x"></i>\n' +
-    '          </div>\n' +
-    '\n' +
-    '          <div class="cd-timeline-content">\n' +
-    '               \n' +
-    '               <p>This is the content of the last section</p>\n' +
-    '               <span class="cd-date ar-inc-mrg">23:59</span>\n' +
-    '          </div>\n' +
-    '     </div>\n' +
+    '    \n' +
     '</section><!-- posts/views/posts_list.html END -->');
 }]);
 })();
